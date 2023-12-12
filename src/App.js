@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+
+const Home = lazy(() => import("./app/home"));
+const About = lazy(() => import("./app/about"));
+const Blog = lazy(() => import("./app/blog"));
+const Contact = lazy(() => import("./app/contact"));
+const Pricing = lazy(() => import("./app/pricing"));
+const Product = lazy(() => import("./app/product"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/blog" element={<Blog />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/pricing" element={<Pricing />} />
+          <Route exact path="/product" element={<Product />} />
+        </Routes>
+      </BrowserRouter>
+    </Suspense>
   );
 }
 
