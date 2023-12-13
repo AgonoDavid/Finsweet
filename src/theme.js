@@ -5,7 +5,6 @@ export const Theme = extendTheme({
     global: () => ({
       body: {
         backgroundColor: "#fff",
-        fontFamily: `'Raleway', sans-serif`,
         color: "#060212",
       },
     }),
