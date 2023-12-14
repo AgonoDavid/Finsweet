@@ -3,6 +3,8 @@ import { Box, Text, Img, Grid, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo2.png";
 import styles from "./style.module.css";
+import line from "../../assets/Line.png";
+import { FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const company = [
@@ -67,7 +69,7 @@ const Footer = () => {
   ];
 
   return (
-    <Box bg={"#1D2130"} textColor={"white"} py={"50px"}>
+    <Box bg={"#1D2130"} textColor={"white"} py={"60px"}>
       <Box display={"flex"} maxW={"1150px"} m={"auto"}>
         <Box>
           <Grid templateColumns={"repeat(4,1fr)"} gap={"10px"}>
@@ -81,7 +83,7 @@ const Footer = () => {
                     _hover={{
                       textDecoration: "underline",
                     }}
-                    textColor={"white"}
+                    textColor={"#B4B4B3"}
                   >
                     {data.name}
                   </Text>
@@ -98,7 +100,7 @@ const Footer = () => {
                     _hover={{
                       textDecoration: "underline",
                     }}
-                    textColor={"white"}
+                    textColor={"#B4B4B3"}
                   >
                     {data.name}
                   </Text>
@@ -115,7 +117,7 @@ const Footer = () => {
                     _hover={{
                       textDecoration: "underline",
                     }}
-                    textColor={"white"}
+                    textColor={"#B4B4B3"}
                   >
                     {data.name}
                   </Text>
@@ -161,7 +163,46 @@ const Footer = () => {
               </Box>
             </Box>
           </Grid>
-          <Text>I love</Text>
+          <Box
+            display={"flex"}
+            justifyContent={"space-between"}
+            mt={"80px"}
+            gap={"10px"}
+          >
+            <Box mt={"auto"} mb={"auto"}>
+              <Img src={line} />
+            </Box>
+            <Box mt={"auto"} mb={"auto"} display={"flex"} gap={"10px"}>
+              <Text fontSize={"9px"} color={"#B4B4B3"}>
+                © Copyright Finsweet 2022
+              </Text>
+              <Box mt={"auto"} mb={"auto"}>
+                <Box
+                  display={"flex"}
+                  justifyContent={"space-between"}
+                  gap={"20px"}
+                  fontSize={"10px"}
+                  color={"#B4B4B3"}
+                >
+                  <a href="/">
+                    <FaFacebook />
+                  </a>
+                  <a href="/">
+                    <FaInstagram />
+                  </a>
+                  <a href="/">
+                    <FaLinkedin />
+                  </a>
+                  <a href="/">
+                    <FaTwitter />
+                  </a>
+                </Box>
+              </Box>
+            </Box>
+            <Box mt={"auto"} mb={"auto"}>
+              <Img src={line} />
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>
