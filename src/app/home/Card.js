@@ -1,26 +1,26 @@
-import { Box, Text, Img, Divider } from "@chakra-ui/react";
 import React from "react";
-import advanced from "../../assets/advanced.svg";
-import customizable from "../../assets/customizable.svg";
-import simple from "../../assets/simple.svg";
+import { Box, Text, Img } from "@chakra-ui/react";
+import support from "../../assets/support.svg";
+import secure from "../../assets/secure.svg";
+import premium from "../../assets/premium.svg";
 
-const Features = () => {
+export const Card = () => {
   return (
-    <Box>
+    <Box mt={"40px"}>
       <Box
         w={"100%"}
-        bg={"#E7BCDE"}
+        bg={"#E0E4FC"}
         rounded={"10px"}
         display={"flex"}
         justifyContent={"space-between"}
         gap={"30px"}
-        p={"40px"}
+        p={"70px"}
       >
         <Box>
-          <Img src={advanced} />
+          <Img src={secure} pb={"5"} />
           <Box>
-            <Text fontSize={"30px"} fontWeight={"bold"}>
-              Advanced 256-bit encryption
+            <Text fontSize={"28px"} fontWeight={"bold"} fontFamily={"Roboto"}>
+              High security to protect from piracy{" "}
             </Text>
             <Text fontSize="13px" pt={"10px"}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -28,22 +28,20 @@ const Features = () => {
             </Text>
           </Box>
         </Box>
-        <Divider orientation="vertical" borderColor={"#E0E4FC"} />
         <Box>
-          <Img src={simple} />
-          <Text fontSize={"30px"} fontWeight={"bold"}>
-            Simple collaboration tools
+          <Img src={premium} pb={"15px"} />
+          <Text fontSize={"28px"} fontWeight={"bold"} fontFamily={"Roboto"}>
+            Premium quality performance{" "}
           </Text>
           <Text fontSize="13px" pt={"10px"}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor.
           </Text>
         </Box>
-        <Divider orientation="vertical" borderColor={"#E0E4FC"} />
         <Box>
-          <Img src={customizable} />
-          <Text fontSize={"30px"} fontWeight={"bold"}>
-            Customizable AI features
+          <Img src={support} pb={"15px"} />
+          <Text fontSize={"28px"} fontWeight={"bold"} fontFamily={"Roboto"}>
+            Full time customer support - 24/7{" "}
           </Text>
           <Text fontSize="13px" pt={"10px"}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -54,5 +52,3 @@ const Features = () => {
     </Box>
   );
 };
-
-export default Features;

@@ -1,0 +1,16 @@
+.bg {
+  background-image: url(../../assets/Blur\ Gradient-0.png);
+  object-fit: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.gradient {
+  /* Create a linear gradient as the text color, going from left to right */
+  background: linear-gradient(to right, #373fff 40%, #3acaf8 60%);
+  /* Set the background clip to text to make the gradient apply to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Set the text color to transparent to make the gradient visible */
+  color: transparent;
+}
