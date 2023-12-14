@@ -1,13 +1,20 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/footers";
+import BorderlessCard from "../../components/borderlessCard";
+import { Box } from "@chakra-ui/react";
 
 const Home = () => {
   return (
-    <div>
+    <Box>
       <Navbar />
-      <Footer />
-    </div>
+      <Box>
+        <BorderlessCard />
+      </Box>
+      <Box>
+        <Footer />
+      </Box>
+    </Box>
   );
 };
 
