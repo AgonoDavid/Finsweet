@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Text, Img, Grid } from "@chakra-ui/react";
+import { Box, Text, Img, Grid, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/Logo2.png";
 
 const Footer = () => {
   const company = [
@@ -66,8 +67,8 @@ const Footer = () => {
 
   return (
     <Box bg={"#1D2130"} textColor={"white"}>
-      <Box display={"flex"} gap={"90px"}>
-        <Grid templateColumns={"repeat(4,2fr)"}>
+      <Box display={"flex"}>
+        <Grid templateColumns={"repeat(4,1fr)"} gap={"90px"}>
           {/*Compnay footer */}
           <Box display={"flex"} flexDir={"column"} gap={"10px"}>
             <Text>Company</Text>
@@ -118,6 +119,17 @@ const Footer = () => {
                 </Text>
               </Link>
             ))}
+          </Box>
+          <Box>
+            <Img src={logo} alt="logo" />
+            <Box bg={"#2B2E3C"}>
+              <input
+                type="text"
+                style={{ backgroundColor: "#2B2E3C", padding: "10px" }}
+                placeholder="Enter your Email"
+              ></input>
+              <Button></Button>
+            </Box>
           </Box>
         </Grid>
       </Box>
