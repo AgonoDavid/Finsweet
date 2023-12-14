@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../../layout";
-import { Box, Button, Text, Img } from "@chakra-ui/react";
+import { Box, Button, Text, Img, Flex } from "@chakra-ui/react";
 import styles from "./style.module.css";
 import dashboardimg from "../../assets/Dashboard image.png";
 import { motion } from "framer-motion";
 import { Card } from "./Card";
+import arrow from "../../assets/arrow.svg";
 
 const MotionBox = motion(Box);
 
@@ -107,6 +108,64 @@ const Home = () => {
       </Box>
       <Box>
         <Card />
+      </Box>
+      <Box display={"flex"} mt={"100px"}>
+        <Box w={"50%"}>
+          <Text
+            className={styles.gradient}
+            fontSize={"23px"}
+            fontWeight={"semibold"}
+            fontFamily={"Roboto"}
+            pb={"10px"}
+          >
+            Why should you work with us?
+          </Text>
+          <Text
+            fontFamily={"Roboto"}
+            fontSize={"38px"}
+            fontWeight={"bold"}
+            pb={"10px"}
+          >
+            To upscale your business
+            <br /> to the next level
+          </Text>
+          <Text fontFamily={"Roboto"} fontSize={"12px"}>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy
+            <br /> eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam
+            <br /> voluptua invidunt ut labore.
+          </Text>
+        </Box>
+        <Box w={"50%"}>
+          <Box>
+            <Flex>
+              <Img src={arrow} />
+              <Text my={"auto"}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </Text>
+            </Flex>
+          </Box>
+          <Box>
+            <Flex>
+              <Img src={arrow} />
+              <Text my={"auto"}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </Text>
+            </Flex>
+          </Box>
+          <Box>
+            <Flex>
+              <Img src={arrow} />
+              <Text my={"auto"}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
+              </Text>
+            </Flex>
+          </Box>
+        </Box>
       </Box>
     </Layout>
   );
