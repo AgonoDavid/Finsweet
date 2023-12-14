@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isLessThan650] = useMediaQuery("(max-width: 600px)");
 
   return (
-    <Box>
+    <Box maxW={"1150px"} m={"auto"}>
       <Box display={"flex"} justifyContent={"space-between"}>
         <Box mt={"auto"} mb={"auto"}>
           <Link to="/">
