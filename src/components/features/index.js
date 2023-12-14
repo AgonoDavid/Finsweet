@@ -1,0 +1,59 @@
+import { Box, Text, Img, Divider } from "@chakra-ui/react";
+import React from "react";
+import advanced from "../../assets/advanced.svg";
+import customizable from "../../assets/customizable.svg";
+import simple from "../../assets/simple.svg";
+
+const Features = () => {
+  return (
+    <Box>
+      <Box
+        w={"100%"}
+        bg={"#E7BCDE"}
+        h={"300px"}
+        rounded={"10px"}
+        display={"flex"}
+        justifyContent={"space-between"}
+        gap={"30px"}
+        p={"40px"}
+      >
+        <Box>
+          <Img src={advanced} />
+          <Box>
+            <Text fontSize={"30px"} fontWeight={"bold"}>
+              Advanced 256-bit encryption
+            </Text>
+            <Text fontSize="13px" pt={"10px"}>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor.
+            </Text>
+          </Box>
+        </Box>
+        <Divider orientation="vertical" borderColor={"#E0E4FC"} />
+        <Box>
+          <Img src={simple} />
+          <Text fontSize={"30px"} fontWeight={"bold"}>
+            Simple collaboration tools
+          </Text>
+          <Text fontSize="13px" pt={"10px"}>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor.
+          </Text>
+        </Box>
+        <Divider orientation="vertical" borderColor={"#E0E4FC"} />
+        <Box>
+          <Img src={customizable} />
+          <Text fontSize={"30px"} fontWeight={"bold"}>
+            Customizable AI features
+          </Text>
+          <Text fontSize="13px" pt={"10px"}>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor.
+          </Text>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default Features;

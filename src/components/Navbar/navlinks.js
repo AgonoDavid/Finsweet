@@ -15,27 +15,39 @@ const Navlinks = () => {
     >
       {/*Home link*/}
       <Link to="/">
-        <Text>Home</Text>
+        <Text _hover={{ fontWeight: "bold", textDecoration: "underline" }}>
+          Home
+        </Text>
       </Link>
       {/* Product link*/}
       <Link to="/product">
-        <Text>Product</Text>
+        <Text _hover={{ fontWeight: "bold", textDecoration: "underline" }}>
+          Product
+        </Text>
       </Link>
       {/*pricing link*/}
       <Link to="/pricing">
-        <Text>Pricing</Text>
+        <Text _hover={{ fontWeight: "bold", textDecoration: "underline" }}>
+          Pricing
+        </Text>
       </Link>
       {/*about us link*/}
       <Link to="/about">
-        <Text>About Us</Text>
+        <Text _hover={{ fontWeight: "bold", textDecoration: "underline" }}>
+          About Us
+        </Text>
       </Link>
       {/*blog link*/}
       <Link to="/blog">
-        <Text>Blog</Text>
+        <Text _hover={{ fontWeight: "bold", textDecoration: "underline" }}>
+          Blog
+        </Text>
       </Link>
       {/*contact link*/}
       <Link to="/contact">
-        <Text>Contact</Text>
+        <Text _hover={{ fontWeight: "bold", textDecoration: "underline" }}>
+          Contact
+        </Text>
       </Link>
       <Box>
         <Link to="/pricing">
