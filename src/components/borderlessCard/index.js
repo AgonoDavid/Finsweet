@@ -4,7 +4,7 @@ import CardBlurGradient from "../../assets/Blur Gradient-1.png";
 
 const BorderlessCard = () => {
   return (
-    <Box position={"relative"}>
+    <Box position={"relative"} mt={"25px"}>
       <Box
         position="absolute"
         top="50%"

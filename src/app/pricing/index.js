@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../../layout";
 
 const Pricing = () => {
-  return <div>Pricing</div>;
+  return <Layout>Pricing</Layout>;
 };
 
 export default Pricing;

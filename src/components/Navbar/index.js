@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <Box maxW={"1150px"} m={"auto"}>
-      <Box display={"flex"} justifyContent={"space-between"}>
+      <Box display={"flex"} justifyContent={"space-between"} mt={"20px"}>
         <Box mt={"auto"} mb={"auto"}>
           <Link to="/">
             <img src={logo} alt="logo" width={"70%"} />

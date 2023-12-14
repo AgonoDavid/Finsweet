@@ -1,21 +1,9 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/footers";
-import BorderlessCard from "../../components/borderlessCard";
 import { Box } from "@chakra-ui/react";
+import Layout from "../../layout";
 
 const Home = () => {
-  return (
-    <Box>
-      <Navbar />
-      <Box>
-        <BorderlessCard />
-      </Box>
-      <Box>
-        <Footer />
-      </Box>
-    </Box>
-  );
+  return <Layout></Layout>;
 };
 
 export default Home;

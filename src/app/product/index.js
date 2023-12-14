@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../../layout";
 
 const Product = () => {
-  return <div>Product</div>;
+  return <Layout>Product</Layout>;
 };
 
 export default Product;
