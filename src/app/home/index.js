@@ -219,7 +219,7 @@ const Home = () => {
         <Partners />
       </Box>
       <Box maxW={"1150px"} m={"auto"}>
-        <Box display={"flex"} my={"100px"}>
+        <Box display={"flex"} my={"130px"}>
           <Box w={"50%"}>
             <Text
               className={styles.gradient}
@@ -322,7 +322,7 @@ const Home = () => {
           gap={"50px"}
           fontSize={"13px"}
           textAlign={"center"}
-          mt={"50px"}
+          mt={"70px"}
         >
           <Box border={"1px solid #6199ED "} p={"40px"} rounded={"20px"}>
             <Text fontWeight={"bold"}>
