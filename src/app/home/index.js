@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../layout";
-import { Box, Button, Text, Img, Flex } from "@chakra-ui/react";
+import { Box, Button, Text, Img, Flex, Center } from "@chakra-ui/react";
 import styles from "./style.module.css";
 import dashboardimg from "../../assets/Dashboard image.png";
 import { motion } from "framer-motion";
@@ -12,6 +12,9 @@ import featureicon1 from "../../assets/Feature Icon with circle.png";
 import featureicon2 from "../../assets/Feature Icon with circle (1).png";
 import featureicon3 from "../../assets/Feature Icon with circle (2).png";
 import Features from "../../components/features";
+import man1 from "../../assets/man-3.png";
+import man2 from "../../assets/man-2.png";
+import man3 from "../../assets/man-1.png";
 
 const MotionBox = motion(Box);
 
@@ -300,6 +303,83 @@ const Home = () => {
           Features
         </Text>
         <Features />
+      </Box>
+      <Box maxW={"1150px"} m={"auto"}>
+        <Text
+          fontSize={"35px"}
+          fontWeight={"bold"}
+          textAlign={"center"}
+          mt={"50px"}
+        >
+          The stunning results our
+          <br /> customers have experienced
+        </Text>
+      </Box>
+      <Box maxW={"1150px"} m={"auto"}>
+        <Box
+          display={"flex"}
+          justifyContent={"space-between"}
+          gap={"50px"}
+          fontSize={"13px"}
+          textAlign={"center"}
+          mt={"50px"}
+        >
+          <Box border={"1px solid #6199ED "} p={"40px"} rounded={"20px"}>
+            <Text fontWeight={"bold"}>
+              {" "}
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua.
+            </Text>
+            <Center>
+              <Img src={man1} w={"25%"} py={"20px"} />
+            </Center>
+            <Text fontWeight={"Bold"} fontSize={"20px"}>
+              Ron Wood
+            </Text>
+            <Text fontSize={"10px"}>CEO</Text>
+          </Box>
+          <Box
+            border={"1px solid #6199ED "}
+            p={"40px"}
+            mx={"auto"}
+            rounded={"20px"}
+          >
+            <Text fontWeight={"bold"}>
+              {" "}
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua.
+            </Text>
+            <Center>
+              <Img src={man2} w={"25%"} py={"20px"} />
+            </Center>
+            <Text fontWeight={"Bold"} fontSize={"20px"}>
+              Mark Mason{" "}
+            </Text>
+            <Text fontSize={"10px"}>Marketing Manager</Text>
+          </Box>
+          <Box
+            border={"1px solid #6199ED "}
+            p={"40px"}
+            mx={"auto"}
+            rounded={"20px"}
+          >
+            <Text fontWeight={"bold"}>
+              {" "}
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua.
+            </Text>
+            <Center>
+              <Img src={man3} w={"25%"} py={"20px"} />
+            </Center>
+            <Text fontWeight={"Bold"} fontSize={"20px"}>
+              Sam Preston
+            </Text>
+            <Text fontSize={"10px"}>CTO</Text>
+          </Box>
+        </Box>
       </Box>
     </Layout>
   );
