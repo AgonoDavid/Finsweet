@@ -127,7 +127,7 @@ const Footer = () => {
             <Box>
               <Box mb={"20px"}>
                 <Link to="/">
-                  <Img src={logo} alt="logo" />
+                  <Img src={logo} alt="logo" w={"50%"} />
                 </Link>
               </Box>
               <Text pb={"10px"}>Subscribe to our Newsletter</Text>

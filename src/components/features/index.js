@@ -9,12 +9,13 @@ const Features = () => {
     <Box>
       <Box
         w={"100%"}
-        bg={"#E7BCDE"}
+        bg={"#FFF0F5"}
         rounded={"10px"}
         display={"flex"}
         justifyContent={"space-between"}
         gap={"30px"}
-        p={"40px"}
+        p={"70px"}
+        mt={"50px"}
       >
         <Box>
           <Img src={advanced} />
@@ -28,7 +29,7 @@ const Features = () => {
             </Text>
           </Box>
         </Box>
-        <Divider orientation="vertical" borderColor={"#E0E4FC"} />
+        <Divider orientation="vertical" />
         <Box>
           <Img src={simple} />
           <Text fontSize={"30px"} fontWeight={"bold"}>
@@ -39,7 +40,7 @@ const Features = () => {
             nonumy eirmod tempor.
           </Text>
         </Box>
-        <Divider orientation="vertical" borderColor={"#E0E4FC"} />
+        <Divider orientation="vertical" />
         <Box>
           <Img src={customizable} />
           <Text fontSize={"30px"} fontWeight={"bold"}>
