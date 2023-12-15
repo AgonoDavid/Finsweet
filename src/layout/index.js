@@ -8,9 +8,7 @@ const Layout = ({ children }) => {
   return (
     <Box>
       <Navbar />
-      <Box maxW={"1150px"} m={"auto"}>
-        {children}
-      </Box>
+      <Box>{children}</Box>
       <BorderlessCard />
       <Footer />
     </Box>

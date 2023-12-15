@@ -6,7 +6,7 @@ import premium from "../../assets/premium.svg";
 
 export const Card = () => {
   return (
-    <Box mt={"40px"}>
+    <Box maxW={"1150px"} m={"auto"}>
       <Box
         w={"100%"}
         bg={"#E0E4FC"}
@@ -15,6 +15,7 @@ export const Card = () => {
         justifyContent={"space-between"}
         gap={"30px"}
         p={"70px"}
+        mt={"50px"}
       >
         <Box>
           <Img src={secure} pb={"5"} />

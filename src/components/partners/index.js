@@ -8,21 +8,28 @@ import { Box, Img } from "@chakra-ui/react";
 
 const Partners = () => {
   return (
-    <Box display={"flex"} justifyContent={"space-between"}>
-      <Box my={"auto"}>
-        <Img src={partner1} />
-      </Box>
-      <Box my={"auto"}>
-        <Img src={partner2} />
-      </Box>
-      <Box my={"auto"}>
-        <Img src={partner3} />
-      </Box>
-      <Box my={"auto"}>
-        <Img src={partner4} />
-      </Box>
-      <Box my={"auto"}>
-        <Img src={partner5} />
+    <Box maxW={"1150px"} m={"auto"}>
+      <Box
+        display={"flex"}
+        justifyContent={"space-between"}
+        gap={"100px"}
+        mt={"50px"}
+      >
+        <Box my={"auto"}>
+          <Img src={partner1} />
+        </Box>
+        <Box my={"auto"}>
+          <Img src={partner2} />
+        </Box>
+        <Box my={"auto"}>
+          <Img src={partner3} />
+        </Box>
+        <Box my={"auto"}>
+          <Img src={partner4} />
+        </Box>
+        <Box my={"auto"}>
+          <Img src={partner5} />
+        </Box>
       </Box>
     </Box>
   );

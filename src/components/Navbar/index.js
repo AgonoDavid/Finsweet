@@ -9,9 +9,9 @@ const Navbar = () => {
   return (
     <Box maxW={"1150px"} m={"auto"}>
       <Box display={"flex"} justifyContent={"space-between"} mt={"20px"}>
-        <Box mt={"auto"} mb={"auto"}>
+        <Box mt={"auto"} mb={"auto"} w={"40%"}>
           <Link to="/">
-            <img src={logo} alt="logo" width={"70%"} />
+            <img src={logo} alt="logo" width={"25%"} />
           </Link>
         </Box>
         <Box>{isLessThan650 ? null : <Navlinks />}</Box>

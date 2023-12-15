@@ -14,3 +14,16 @@
   /* Set the text color to transparent to make the gradient visible */
   color: transparent;
 }
+
+.colorBg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    rgb(203, 237, 206) 10%,
+    #c3d7f0 50%,
+    #d0d9f2 75%
+  );
+}

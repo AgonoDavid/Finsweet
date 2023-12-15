@@ -12,6 +12,7 @@ const Navlinks = () => {
       gap={"40px"}
       mt={"auto"}
       mb={"auto"}
+      fontSize={"13px"}
     >
       {/*Home link*/}
       <Link to="/">
