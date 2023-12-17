@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Text, Img } from "@chakra-ui/react";
-import support from "../../assets/support.svg";
-import secure from "../../assets/secure.svg";
-import premium from "../../assets/premium.svg";
+import { Box, Text, Img, useMediaQuery } from "@chakra-ui/react";
+import support from "../../../assets/simple.svg";
+import secure from "../../../assets/secure.svg";
+import premium from "../../../assets/premium.svg";
 
 export const Card = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
   return (
     <Box maxW={"1150px"} m={"auto"}>
       <Box
@@ -12,6 +14,7 @@ export const Card = () => {
         bg={"#E0E4FC"}
         rounded={"10px"}
         display={"flex"}
+        flexDir={isLargerThan800 ? "row" : "column"}
         justifyContent={"space-between"}
         gap={"30px"}
         p={"70px"}

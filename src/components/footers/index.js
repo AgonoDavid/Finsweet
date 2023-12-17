@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Img, Grid, Button } from "@chakra-ui/react";
+import { Box, Text, Img, Grid, Button, useMediaQuery } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo2.png";
 import styles from "./style.module.css";
@@ -7,6 +7,8 @@ import line from "../../assets/Line.png";
 import { FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
   const company = [
     {
       name: "About Us",

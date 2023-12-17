@@ -1,12 +1,14 @@
-import { Box, Text, Img, Divider } from "@chakra-ui/react";
+import { Box, Text, Img, Divider, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import advanced from "../../assets/advanced.svg";
 import customizable from "../../assets/customizable.svg";
 import simple from "../../assets/simple.svg";
 
 const Features = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
   return (
-    <Box>
+    <Box maxW={"1150px"} m={"auto"}>
       <Box
         w={"100%"}
         bg={"#FFF0F5"}
@@ -16,6 +18,7 @@ const Features = () => {
         gap={"30px"}
         p={"70px"}
         mt={"50px"}
+        flexDir={isLargerThan800 ? "row" : "column"}
       >
         <Box>
           <Img src={advanced} />
