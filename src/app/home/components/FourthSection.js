@@ -15,6 +15,8 @@ const FourthSection = () => {
         my={"130px"}
         flexDir={isLargerThan800 ? "row" : "column"}
         justifyContent={"space-between"}
+        align={isLargerThan800 ? "start" : "center"}
+        gap={isLargerThan800 ? null : "30px"}
       >
         <Box>
           <Text
@@ -47,6 +49,8 @@ const FourthSection = () => {
           display="flex"
           flexDirection="column"
           justifyContent={"space-between"}
+          textAlign={isLargerThan800 ? null : "start"}
+          gap={isLargerThan800 ? null : "20px"}
         >
           <Box>
             <Flex>

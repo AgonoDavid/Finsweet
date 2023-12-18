@@ -19,6 +19,7 @@ export const Card = () => {
         gap={"30px"}
         p={"70px"}
         mt={"50px"}
+        align={isLargerThan800 ? "start" : "center"}
       >
         <Box>
           <Img src={secure} pb={"5"} />

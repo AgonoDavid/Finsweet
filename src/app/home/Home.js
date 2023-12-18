@@ -17,7 +17,7 @@ export const Home = () => {
 
   return (
     <Layout>
-      <Box className={styles.bg}>
+      <Box className={styles.bg} align={isLargerThan800 ? "start" : "center"}>
         <Box>
           <Text
             textAlign={"center"}
