@@ -11,9 +11,18 @@ import SecondSection from "./components/SecondSection";
 import ThirdSection from "./components/ThirdSection";
 import FourthSection from "./components/FourthSection";
 import FifthSection from "./components/FifthSection";
+import { useAnimation, motion } from "framer-motion";
+import { useEffect } from "react";
 
 export const Home = () => {
+  const controls = useAnimation();
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
+  const transition = { duration: 0.8 };
+
+  useEffect(() => {
+    controls.start({ y: 0 });
+  }, [controls]);
 
   return (
     <Layout>
@@ -22,69 +31,75 @@ export const Home = () => {
         align={isLargerThan800 ? "start" : "center"}
         m={"auto"}
       >
-        <Box>
+        <motion.div
+          initial={{ y: -1000 }}
+          animate={controls}
+          transition={transition}
+        >
+          <Box>
+            <Text
+              textAlign={"center"}
+              fontSize={isLargerThan800 ? "65px" : "35px"}
+              fontWeight={"bold"}
+              pt={"120px"}
+              fontFamily={"Roboto"}
+            >
+              The Best Software{isLargerThan800 ? null : <br />} to Grow <br />{" "}
+              your Sales and Services
+            </Text>
+          </Box>
           <Text
             textAlign={"center"}
-            fontSize={isLargerThan800 ? "65px" : "35px"}
-            fontWeight={"bold"}
-            pt={"120px"}
+            pt={"30px"}
             fontFamily={"Roboto"}
+            fontSize={"16px"}
           >
-            The Best Software{isLargerThan800 ? null : <br />} to Grow <br />{" "}
-            your Sales and Services
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor <br /> invidunt ut labore et dolore magna
+            aliquyam erat.
           </Text>
-        </Box>
-        <Text
-          textAlign={"center"}
-          pt={"30px"}
-          fontFamily={"Roboto"}
-          fontSize={"16px"}
-        >
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor <br /> invidunt ut labore et dolore magna
-          aliquyam erat.
-        </Text>
-        <Box display="flex" alignItems="center" justifyContent="center">
-          <Box
-            bg={"#ffff"}
-            px={"10px"}
-            py={"10px"}
-            display={"flex"}
-            gap={"40px"}
-            w={isLargerThan800 ? "50%" : "100%"}
-            m={isLargerThan800 ? "0px" : "40px"}
-            justifyContent={"space-between"}
-            borderTopLeftRadius={"15px"}
-            borderBottomLeftRadius={"15px"}
-            borderTopRightRadius={"15px"}
-            borderBottomRightRadius={"15px"}
-            mt={"50px"}
-            mb={"45px"}
-          >
-            <input
-              type="text"
-              style={{
-                backgroundColor: "#ffff",
-                fontSize: "13px",
-              }}
-              placeholder="Enter your Email"
-            ></input>
-            <Button
-              bg={"black"}
-              color={"white"}
-              size={"md"}
-              rounded={"15px"}
-              _hover={{
-                backgroundColor: "grey",
-                textColor: "white",
-              }}
-              fontSize={"13px"}
-              p={"22px"}
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <Box
+              bg={"#ffff"}
+              px={"10px"}
+              py={"10px"}
+              display={"flex"}
+              gap={"40px"}
+              w={isLargerThan800 ? "50%" : "100%"}
+              m={isLargerThan800 ? "0px" : "40px"}
+              justifyContent={"space-between"}
+              borderTopLeftRadius={"15px"}
+              borderBottomLeftRadius={"15px"}
+              borderTopRightRadius={"15px"}
+              borderBottomRightRadius={"15px"}
+              mt={"50px"}
+              mb={"45px"}
             >
-              Get a free trial
-            </Button>
+              <input
+                type="text"
+                style={{
+                  backgroundColor: "#ffff",
+                  fontSize: "13px",
+                }}
+                placeholder="Enter your Email"
+              ></input>
+              <Button
+                bg={"black"}
+                color={"white"}
+                size={"md"}
+                rounded={"15px"}
+                _hover={{
+                  backgroundColor: "grey",
+                  textColor: "white",
+                }}
+                fontSize={"13px"}
+                p={"22px"}
+              >
+                Get a free trial
+              </Button>
+            </Box>
           </Box>
-        </Box>
+        </motion.div>
       </Box>
       <MotionBox
         mx={"auto"}
