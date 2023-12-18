@@ -18,8 +18,6 @@ export const Home = () => {
   const controls = useAnimation();
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
-  const transition = { duration: 0.8 };
-
   useEffect(() => {
     controls.start({ y: 0 });
   }, [controls]);
@@ -34,7 +32,7 @@ export const Home = () => {
         <motion.div
           initial={{ y: -1000 }}
           animate={controls}
-          transition={transition}
+          transition={{ duration: 2, type: "spring" }}
         >
           <Box>
             <Text
