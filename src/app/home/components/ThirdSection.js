@@ -9,7 +9,7 @@ const ThirdSection = () => {
 
   return (
     <Box className={styles.colorBg}>
-      <Box maxW={"1150px"} m={"auto"}>
+      <Box maxW={isLargerThan800 ? "1150px" : "350px"} m={"auto"}>
         <Box
           py={"60px"}
           display={"flex"}

@@ -1,0 +1,7 @@
+.backGround {
+  background-image: url(/src/assets/Blur\ Gradient-1.png);
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: center; /* Center the background image */
+  width: 100%;
+}

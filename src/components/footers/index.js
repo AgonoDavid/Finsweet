@@ -74,7 +74,12 @@ const Footer = () => {
     <Box bg={"#1D2130"} textColor={"white"} py={"60px"}>
       <Box display={"flex"} maxW={"1150px"} m={"auto"}>
         <Box>
-          <Grid templateColumns={"repeat(4,1fr)"} gap={"10px"}>
+          <Grid
+            templateColumns={
+              isLargerThan800 ? "repeat(4,1fr)" : "repeat(1,1fr)"
+            }
+            gap={isLargerThan800 ? "10px" : "40px"}
+          >
             {/*Compnay footer */}
             <Box display={"flex"} flexDir={"column"} gap={"10px"}>
               <Text>Company</Text>
