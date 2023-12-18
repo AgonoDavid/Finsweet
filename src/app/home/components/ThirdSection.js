@@ -18,7 +18,11 @@ const ThirdSection = () => {
           gap={"70px"}
           w={"100%"}
         >
-          <Box my={"auto"} textAlign={isLargerThan800 ? "start" : "center"}>
+          <Box
+            my={"auto"}
+            textAlign={isLargerThan800 ? "start" : "center"}
+            w={isLargerThan800 ? "50%" : "100%"}
+          >
             <Text fontSize={"55px"} fontWeight={"bold"}>
               More impressions, more conversions
             </Text>
@@ -36,7 +40,7 @@ const ThirdSection = () => {
               Get a Free Trial
             </Button>
           </Box>
-          <Box>
+          <Box w={isLargerThan800 ? "50%" : "100%"}>
             <Img src={cardImg} alt="cardImg" objectFit={"contain"} />
           </Box>
         </Box>

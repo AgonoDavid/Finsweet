@@ -126,7 +126,7 @@ export const Home = () => {
         <Text
           fontSize={"35px"}
           fontWeight={"bold"}
-          py={"40px"}
+          pt={"60px"}
           textAlign={"center"}
         >
           Features
