@@ -51,7 +51,8 @@ export const Home = () => {
             py={"10px"}
             display={"flex"}
             gap={"40px"}
-            w={"50%"}
+            w={isLargerThan800 ? "50%" : "100%"}
+            m={isLargerThan800 ? "0px" : "40px"}
             justifyContent={"space-between"}
             borderTopLeftRadius={"15px"}
             borderBottomLeftRadius={"15px"}
