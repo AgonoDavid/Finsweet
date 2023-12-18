@@ -72,7 +72,11 @@ const Footer = () => {
 
   return (
     <Box bg={"#1D2130"} textColor={"white"} py={"60px"}>
-      <Box display={"flex"} maxW={"1150px"} m={"auto"}>
+      <Box
+        display={"flex"}
+        maxW={isLargerThan800 ? "1150px" : "350px"}
+        m={"auto"}
+      >
         <Box>
           <Grid
             templateColumns={

@@ -1,11 +1,14 @@
 import React from "react";
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text, Button, useMediaQuery } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
+
 const BorderlessCard = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
   return (
     <Box className={styles.backGround}>
-      <Box py={"100px"}>
+      <Box py={"100px"} maxW={isLargerThan800 ? "1150px" : "320px"} m={"auto"}>
         <Text fontSize={"36px"} fontWeight={"semibold"} textAlign={"center"}>
           Are you ready to grow your
           <br /> business with us?

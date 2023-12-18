@@ -18,7 +18,7 @@ const ThirdSection = () => {
           gap={"70px"}
           w={"100%"}
         >
-          <Box my={"auto"}>
+          <Box my={"auto"} textAlign={isLargerThan800 ? "start" : "center"}>
             <Text fontSize={"55px"} fontWeight={"bold"}>
               More impressions, more conversions
             </Text>

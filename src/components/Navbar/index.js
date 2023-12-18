@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
   return (
-    <Box maxW={isLargerThan800 ? "1150px" : "560px"} m={"auto"}>
+    <Box maxW={isLargerThan800 ? "1150px" : "520px"} m={"auto"}>
       <Box
         display={"flex"}
         justifyContent={isLargerThan800 ? "space-between" : "space-around"}

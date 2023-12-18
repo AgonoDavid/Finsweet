@@ -17,7 +17,11 @@ export const Home = () => {
 
   return (
     <Layout>
-      <Box className={styles.bg} align={isLargerThan800 ? "start" : "center"}>
+      <Box
+        className={styles.bg}
+        align={isLargerThan800 ? "start" : "center"}
+        m={"auto"}
+      >
         <Box>
           <Text
             textAlign={"center"}

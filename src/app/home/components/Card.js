@@ -8,7 +8,7 @@ export const Card = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
   return (
-    <Box maxW={"1150px"} m={"auto"}>
+    <Box maxW={isLargerThan800 ? "1150px" : "350px"} m={"auto"}>
       <Box
         w={"100%"}
         bg={"#E0E4FC"}
