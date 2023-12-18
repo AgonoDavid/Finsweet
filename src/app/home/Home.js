@@ -21,13 +21,13 @@ export const Home = () => {
         <Box>
           <Text
             textAlign={"center"}
-            fontSize={isLargerThan800 ? "55px" : "35px"}
+            fontSize={isLargerThan800 ? "65px" : "35px"}
             fontWeight={"bold"}
             pt={"120px"}
             fontFamily={"Roboto"}
           >
-            The Best Software{isLargerThan800 ? null : <br />} to{" "}
-            {isLargerThan800 ? <br /> : null} Grow your Sales and Services
+            The Best Software{isLargerThan800 ? null : <br />} to Grow <br />{" "}
+            your Sales and Services
           </Text>
         </Box>
         <Text

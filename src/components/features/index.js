@@ -19,6 +19,7 @@ const Features = () => {
         p={"70px"}
         mt={"50px"}
         flexDir={isLargerThan800 ? "row" : "column"}
+        align={isLargerThan800 ? "start" : "center"}
       >
         <Box>
           <Img src={advanced} />

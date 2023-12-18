@@ -12,7 +12,7 @@ const FourthSection = () => {
     <Box maxW={isLargerThan800 ? "1150px" : "350px"} m={"auto"}>
       <Box
         display={"flex"}
-        my={"130px"}
+        my={"80px"}
         flexDir={isLargerThan800 ? "row" : "column"}
         justifyContent={"space-between"}
         align={isLargerThan800 ? "start" : "center"}
@@ -34,8 +34,8 @@ const FourthSection = () => {
             fontWeight={"bold"}
             pb={"10px"}
           >
-            Analyze your sales and
-            <br /> marketing leads
+            Analyze Your Sales And
+            <br /> Marketing Leads
           </Text>
           <Text fontFamily={"Roboto"} fontSize={"12px"}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
