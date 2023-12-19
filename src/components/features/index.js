@@ -6,9 +6,13 @@ import simple from "../../assets/simple.svg";
 
 const Features = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery("(max-width: 1024px)");
 
   return (
-    <Box maxW={isLargerThan800 ? "1150px" : "350px"} m={"auto"}>
+    <Box
+      maxW={[isLargerThan800 ? "1150px" : "350px", isMdScreen ? "750px" : null]}
+      m={"auto"}
+    >
       <Box
         w={"100%"}
         bg={"#FFF0F5"}

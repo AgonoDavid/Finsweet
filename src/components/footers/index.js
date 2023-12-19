@@ -8,6 +8,7 @@ import { FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery("(max-width: 1024px)");
 
   const company = [
     {
@@ -74,7 +75,10 @@ const Footer = () => {
     <Box bg={"#1D2130"} textColor={"white"} py={"60px"}>
       <Box
         display={"flex"}
-        maxW={isLargerThan800 ? "1150px" : "350px"}
+        maxW={[
+          isLargerThan800 ? "1150px" : "350px",
+          isMdScreen ? "750px" : null,
+        ]}
         m={"auto"}
       >
         <Box>

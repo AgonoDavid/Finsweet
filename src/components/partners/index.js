@@ -8,9 +8,13 @@ import { Box, Img, useMediaQuery } from "@chakra-ui/react";
 
 const Partners = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery("(max-width: 1024px)");
 
   return (
-    <Box maxW={"1150px"} m={"auto"}>
+    <Box
+      maxW={[isLargerThan800 ? "1150px" : "350px", isMdScreen ? "750px" : null]}
+      m={"auto"}
+    >
       <Box
         display={"flex"}
         justifyContent={"space-between"}
