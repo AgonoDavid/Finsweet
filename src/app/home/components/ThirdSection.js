@@ -12,7 +12,7 @@ const ThirdSection = () => {
     <Box className={styles.colorBg}>
       <Box
         maxW={[
-          isLargerThan800 ? "1150px" : "350px",
+          isLargerThan800 ? "1150px" : "330px",
           isMdScreen ? "750px" : null,
         ]}
         m={"auto"}

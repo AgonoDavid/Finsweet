@@ -50,7 +50,7 @@ const FifthSection = () => {
     >
       <Box
         maxW={[
-          isLargerThan800 ? "1150px" : "350px",
+          isLargerThan800 ? "1150px" : "330px",
           isMdScreen ? "750px" : null,
         ]}
         m={"auto"}

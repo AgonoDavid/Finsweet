@@ -9,7 +9,7 @@ const SecondSection = () => {
 
   return (
     <Box
-      maxW={[isLargerThan800 ? "1150px" : "350px", isMdScreen ? "750px" : null]}
+      maxW={[isLargerThan800 ? "1150px" : "330px", isMdScreen ? "750px" : null]}
       m={"auto"}
     >
       <Box

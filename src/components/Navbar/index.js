@@ -13,13 +13,14 @@ const Navbar = () => {
 
   return (
     <Box
-      maxW={[isLargerThan800 ? "1150px" : "350px", isMdScreen ? "750px" : null]}
+      maxW={[isLargerThan800 ? "1150px" : "650px", isMdScreen ? "750px" : null]}
       m={"auto"}
     >
       <Box
         display={"flex"}
-        justifyContent={isLargerThan800 ? "space-between" : "space-around"}
+        justifyContent={isLargerThan800 ? "space-between" : "space-between"}
         mt={"20px"}
+        mx={isLargerThan800 ? null : "23px"}
       >
         <Box mt={"auto"} mb={"auto"} w={"40%"}>
           <Link to="/">
