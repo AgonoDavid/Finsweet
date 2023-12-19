@@ -39,7 +39,7 @@ export const Home = () => {
             <Text
               textAlign={"center"}
               fontSize={[
-                isLargerThan800 ? "65px" : "35px",
+                isLargerThan800 ? "65px" : "32px",
                 isMdScreen ? "50px" : "65px",
               ]}
               fontWeight={"bold"}
