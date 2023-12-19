@@ -3,8 +3,8 @@ import Navlinks from "./navlinks";
 import logo from "../../assets/Logo.png";
 import { Box, Link, useMediaQuery, Img } from "@chakra-ui/react";
 import { useState } from "react";
-import MenuIconImg from "../../assets/icon-hamburger.svg";
-import Mobile from "./Mobile";
+import MenuIconImg from "../../assets/icon hamburger.png";
+import Mobile from "./components/Mobile";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);

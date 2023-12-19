@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, CloseButton, Text } from "@chakra-ui/react";
-import CustomButton from "../Button";
+import CustomButton from "../../Button";
 import { Link } from "react-router-dom";
 
 const Mobile = ({ show, onClose }) => {
