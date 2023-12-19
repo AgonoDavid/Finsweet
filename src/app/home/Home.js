@@ -17,6 +17,7 @@ import { useEffect } from "react";
 export const Home = () => {
   const controls = useAnimation();
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery("(max-width: 1024px)");
 
   useEffect(() => {
     controls.start({ y: 0 });
@@ -37,12 +38,16 @@ export const Home = () => {
           <Box>
             <Text
               textAlign={"center"}
-              fontSize={isLargerThan800 ? "65px" : "35px"}
+              fontSize={[
+                isLargerThan800 ? "65px" : "35px",
+                isMdScreen ? "50px" : "65px",
+              ]}
               fontWeight={"bold"}
               pt={"120px"}
               fontFamily={"Roboto"}
             >
-              The Best Software{isLargerThan800 ? null : <br />} to Grow <br />{" "}
+              The Best Software
+              {isLargerThan800 ? null : <br />} to Grow <br />
               your Sales and Services
             </Text>
           </Box>
