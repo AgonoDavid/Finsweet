@@ -1,15 +1,22 @@
 import React from "react";
 import styles from "../style.module.css";
-import { Box, Text, Img, useMediaQuery } from "@chakra-ui/react";
+import { Box, Text, Img, useMediaQuery, Center } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import cardImg from "../../../assets/Image.png";
 
 const ThirdSection = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery("(max-width: 1024px)");
 
   return (
     <Box className={styles.colorBg}>
-      <Box maxW={isLargerThan800 ? "1150px" : "350px"} m={"auto"}>
+      <Box
+        maxW={[
+          isLargerThan800 ? "1150px" : "350px",
+          isMdScreen ? "750px" : null,
+        ]}
+        m={"auto"}
+      >
         <Box
           py={"60px"}
           display={"flex"}
@@ -23,7 +30,7 @@ const ThirdSection = () => {
             textAlign={isLargerThan800 ? "start" : "center"}
             w={isLargerThan800 ? "50%" : "100%"}
           >
-            <Text fontSize={"55px"} fontWeight={"bold"}>
+            <Text fontSize={isMdScreen ? "35px" : "55px"} fontWeight={"bold"}>
               More impressions, more conversions
             </Text>
             <Text fontSize={"15px"} py={"25px"}>

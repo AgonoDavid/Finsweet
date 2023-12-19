@@ -18,6 +18,10 @@ export const Home = () => {
   const controls = useAnimation();
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
+  const [isMdScreen] = useMediaQuery(
+    "(min-width: 801px) and (max-width: 960px)"
+  );
+
   useEffect(() => {
     controls.start({ y: 0 });
   }, [controls]);

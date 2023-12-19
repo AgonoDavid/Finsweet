@@ -8,6 +8,7 @@ import { useRef, useEffect } from "react";
 
 const FifthSection = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery("(max-width: 1024px)");
 
   const controls = useAnimation();
   const sectionRef = useRef(null);
@@ -48,7 +49,10 @@ const FifthSection = () => {
       transition={transition}
     >
       <Box
-        maxW={isLargerThan800 ? "1150px" : "350px"}
+        maxW={[
+          isLargerThan800 ? "1150px" : "350px",
+          isMdScreen ? "750px" : null,
+        ]}
         m={"auto"}
         ref={sectionRef}
       >

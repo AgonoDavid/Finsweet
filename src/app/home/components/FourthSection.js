@@ -7,16 +7,20 @@ import featureicon3 from "../../../assets/Feature Icon with circle (2).png";
 
 const FourthSection = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
 
   return (
-    <Box maxW={isLargerThan800 ? "1150px" : "350px"} m={"auto"}>
+    <Box
+      maxW={[isLargerThan800 ? "1150px" : "350px", isMdScreen ? "750px" : null]}
+      m={"auto"}
+    >
       <Box
         display={"flex"}
         my={"80px"}
         flexDir={isLargerThan800 ? "row" : "column"}
         justifyContent={"space-between"}
         align={isLargerThan800 ? "start" : "center"}
-        gap={isLargerThan800 ? null : "30px"}
+        gap={(isLargerThan800 ? null : "30px", isMdScreen ? "40px" : null)}
       >
         <Box>
           <Text
@@ -30,7 +34,7 @@ const FourthSection = () => {
           </Text>
           <Text
             fontFamily={"Roboto"}
-            fontSize={"38px"}
+            fontSize={isMdScreen ? "25px" : "38px"}
             fontWeight={"bold"}
             pb={"10px"}
           >

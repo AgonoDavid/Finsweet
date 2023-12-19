@@ -9,9 +9,17 @@ import Mobile from "./Mobile";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(
+    "(min-width: 801px) and (max-width: 960px)"
+  );
 
   return (
-    <Box maxW={isLargerThan800 ? "1150px" : "520px"} m={"auto"}>
+    <Box
+      maxW={
+        (isLargerThan800 ? "1150px" : "520px", isMdScreen ? "750px" : "1150px")
+      }
+      m={"auto"}
+    >
       <Box
         display={"flex"}
         justifyContent={isLargerThan800 ? "space-between" : "space-around"}

@@ -5,15 +5,20 @@ import styles from "../style.module.css";
 
 const SecondSection = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
 
   return (
-    <Box maxW={isLargerThan800 ? "1150px" : "350px"} m={"auto"}>
+    <Box
+      maxW={[isLargerThan800 ? "1150px" : "350px", isMdScreen ? "750px" : null]}
+      m={"auto"}
+    >
       <Box
         display={"flex"}
         my={"100px"}
         flexDir={isLargerThan800 ? "row" : "column"}
         justifyContent={"space-between"}
         align={isLargerThan800 ? "start" : "center"}
+        gap={isMdScreen ? "40px" : null}
       >
         <Box pb={isLargerThan800 ? "0px" : "40px"}>
           <Text
@@ -27,7 +32,7 @@ const SecondSection = () => {
           </Text>
           <Text
             fontFamily={"Roboto"}
-            fontSize={"38px"}
+            fontSize={isMdScreen ? "25px" : "38px"}
             fontWeight={"bold"}
             pb={"10px"}
           >

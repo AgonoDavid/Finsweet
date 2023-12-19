@@ -5,10 +5,14 @@ import secure from "../../../assets/secure.svg";
 import premium from "../../../assets/premium.svg";
 
 export const Card = () => {
-  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isLargerThan800] = useMediaQuery("(min-width: 801px)");
+  const [isMdScreen] = useMediaQuery("(max-width: 1024px)");
 
   return (
-    <Box maxW={isLargerThan800 ? "1150px" : "350px"} m={"auto"}>
+    <Box
+      maxW={[isLargerThan800 ? "1150px" : "350px", isMdScreen ? "750px" : null]}
+      m={"auto"}
+    >
       <Box
         w={"100%"}
         bg={"#E0E4FC"}
@@ -19,7 +23,10 @@ export const Card = () => {
         gap={"30px"}
         p={"70px"}
         mt={"50px"}
-        align={isLargerThan800 ? "start" : "center"}
+        align={
+          (isLargerThan800 ? "start" : "center",
+          isMdScreen ? "center" : "start")
+        }
       >
         <Box>
           <Img src={secure} pb={"5"} />
