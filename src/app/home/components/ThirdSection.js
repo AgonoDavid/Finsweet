@@ -22,7 +22,7 @@ const ThirdSection = () => {
           display={"flex"}
           flexDir={isLargerThan800 ? "row" : "column"}
           justifyContent={"space-between"}
-          gap={"70px"}
+          gap={isLargerThan800 ? "70px" : "90px"}
           w={"100%"}
         >
           <Box
@@ -43,6 +43,7 @@ const ThirdSection = () => {
               p={"25px"}
               textColor={"white"}
               _hover={{ bg: "white", color: "black" }}
+              textAlign={"center"}
             >
               Get a Free Trial
             </Button>
