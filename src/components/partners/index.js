@@ -20,24 +20,23 @@ const Partners = () => {
         justifyContent={"space-between"}
         gap={isLargerThan800 ? "100px" : "20px"}
         mt={"50px"}
-        w={isLargerThan800 ? "100%" : "100%"}
         px={isLargerThan800 ? null : "20px"}
       >
-        <Box my={"auto"}>
-          <Img src={partner1} />
+        <Box>
+          <Img src={partner1} w={isLargerThan800 ? "100%" : "100%"} />
         </Box>
 
-        <Box my={"auto"}>
-          <Img src={partner2} />
+        <Box>
+          <Img src={partner2} w={isLargerThan800 ? "100%" : "100%"} />
         </Box>
-        <Box my={"auto"}>
-          <Img src={partner3} />
+        <Box>
+          <Img src={partner3} w={isLargerThan800 ? "100%" : "100%"} />
         </Box>
-        <Box my={"auto"}>
-          <Img src={partner4} />
+        <Box>
+          <Img src={partner4} w={isLargerThan800 ? "100%" : "100%"} />
         </Box>
-        <Box my={"auto"}>
-          <Img src={partner5} />
+        <Box>
+          <Img src={partner5} w={isLargerThan800 ? "100%" : "100%"} />
         </Box>
       </Box>
     </Box>
