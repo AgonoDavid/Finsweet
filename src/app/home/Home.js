@@ -111,7 +111,7 @@ export const Home = () => {
         animate={{ x: 0 }}
         transition={{ type: "spring", stiffness: 20, duration: 3 }}
       >
-        <Img src={dashboardimg} />
+        <Img src={dashboardimg} w={"50%"} />
       </MotionBox>
 
       <Box mt={"100px"}>
