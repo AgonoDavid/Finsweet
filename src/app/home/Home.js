@@ -1,6 +1,13 @@
 import React from "react";
 import Layout from "../../layout";
-import { Box, Button, Text, Img, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Text,
+  Img,
+  useMediaQuery,
+  Center,
+} from "@chakra-ui/react";
 import styles from "./style.module.css";
 import dashboardimg from "../../assets/Dashboard image.png";
 import Partners from "../../components/partners";
@@ -111,7 +118,9 @@ export const Home = () => {
         animate={{ x: 0 }}
         transition={{ type: "spring", stiffness: 20, duration: 3 }}
       >
-        <Img src={dashboardimg} w={"50%"} />
+        <Center>
+          <Img src={dashboardimg} w={isLargerThan800 ? "50%" : "100%"} />
+        </Center>
       </MotionBox>
 
       <Box mt={"100px"}>
