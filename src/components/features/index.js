@@ -57,7 +57,10 @@ const Features = () => {
         <Divider orientation="vertical" />
         <Box>
           <Img src={customizable} />
-          <Text fontSize={"30px"} fontWeight={"bold"}>
+          <Text
+            fontSize={isLargerThan800 ? "30px" : "20px"}
+            fontWeight={"bold"}
+          >
             Customizable AI features
           </Text>
           <Text fontSize="13px" pt={"10px"}>
