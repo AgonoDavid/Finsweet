@@ -28,10 +28,13 @@ const Features = () => {
         <Box>
           <Img src={advanced} />
           <Box>
-            <Text fontSize={"30px"} fontWeight={"bold"}>
+            <Text
+              fontSize={isLargerThan800 ? "30px" : "20px"}
+              fontWeight={"bold"}
+            >
               Advanced 256-bit encryption
             </Text>
-            <Text fontSize="13px" pt={"10px"}>
+            <Text fontSize={isLargerThan800 ? "30px" : "20px"}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor.
             </Text>
@@ -40,7 +43,10 @@ const Features = () => {
         <Divider orientation="vertical" />
         <Box>
           <Img src={simple} />
-          <Text fontSize={"30px"} fontWeight={"bold"}>
+          <Text
+            fontSize={isLargerThan800 ? "30px" : "20px"}
+            fontWeight={"bold"}
+          >
             Simple collaboration tools
           </Text>
           <Text fontSize="13px" pt={"10px"}>

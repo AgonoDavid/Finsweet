@@ -18,7 +18,7 @@ const Partners = () => {
       <Box
         display={"flex"}
         justifyContent={"space-between"}
-        gap={isLargerThan800 ? "100px" : "50px"}
+        gap={isLargerThan800 ? "100px" : "40px"}
         mt={"50px"}
         px={isLargerThan800 ? null : "20px"}
       >
