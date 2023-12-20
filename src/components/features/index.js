@@ -20,7 +20,7 @@ const Features = () => {
         display={"flex"}
         justifyContent={"space-between"}
         gap={"30px"}
-        p={"70px"}
+        p={isLargerThan800 ? "70px" : "40px"}
         mt={"50px"}
         flexDir={isLargerThan800 ? "row" : "column"}
         align={isLargerThan800 ? "start" : "center"}
@@ -34,7 +34,7 @@ const Features = () => {
             >
               Advanced 256-bit encryption
             </Text>
-            <Text fontSize={isLargerThan800 ? "30px" : "20px"}>
+            <Text fontSize="13px">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor.
             </Text>
