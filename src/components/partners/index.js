@@ -20,7 +20,7 @@ const Partners = () => {
         justifyContent={"space-between"}
         gap={isLargerThan800 ? "100px" : "20px"}
         mt={"50px"}
-        w={isLargerThan800 ? "20%" : "100%"}
+        w={isLargerThan800 ? "100%" : "100%"}
         px={isLargerThan800 ? null : "20px"}
       >
         <Box my={"auto"}>
