@@ -119,7 +119,7 @@ export const Home = () => {
         transition={{ type: "spring", stiffness: 20, duration: 3 }}
       >
         <Center>
-          <Img src={dashboardimg} w={isLargerThan800 ? "50%" : "100%"} />
+          <Img src={dashboardimg} w={isLargerThan800 ? "100%" : "50%"} />
         </Center>
       </MotionBox>
 
