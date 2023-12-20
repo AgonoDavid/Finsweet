@@ -47,9 +47,14 @@ const ThirdSection = () => {
               Get a Free Trial
             </Button>
           </Box>
-          <Box w={isLargerThan800 ? "50%" : "100%"}>
-            <Img src={cardImg} alt="cardImg" objectFit={"contain"} />
-          </Box>
+          <Center>
+            <Img
+              src={cardImg}
+              alt="cardImg"
+              objectFit={"contain"}
+              w={isLargerThan800 ? "100%" : "100%"}
+            />
+          </Center>{" "}
         </Box>
       </Box>
     </Box>
