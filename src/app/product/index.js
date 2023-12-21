@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../../layout";
 import styles from "./style.module.css";
-import { Box, Img, Text, Center, Flex, Button } from "@chakra-ui/react";
+import { Box, Img, Text, Flex, Button } from "@chakra-ui/react";
 import dashboardimg from "../../assets/Dashboard image.png";
-import CustomButton from "../../components/Button";
 import { useMediaQuery } from "@chakra-ui/react";
+import Partners from "../../components/partners";
+import SecondSection from "./components/secondsection";
 
 const Product = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
@@ -22,7 +23,7 @@ const Product = () => {
           display={"flex"}
           justifyContent={"space-between"}
           w={"100%"}
-          py={"50px"}
+          py={"60px"}
           gap={"35px"}
         >
           <Box w={"50%"} my={"auto"}>
@@ -55,7 +56,9 @@ const Product = () => {
             <Img src={dashboardimg} />
           </Box>
         </Box>
+        <Partners />
       </Box>
+      <SecondSection />
     </Layout>
   );
 };
