@@ -52,10 +52,10 @@ export const Home = () => {
               fontWeight={"bold"}
               pt={"120px"}
               fontFamily={"Roboto"}
+              px={isLargerThan800 ? null : "20px"}
             >
               The Best Software
-              {isLargerThan800 ? null : <br />} to Grow <br />
-              your Sales and Services
+              {isLargerThan800 ? null : <br />} to Grow your Sales and Services
             </Text>
           </Box>
           <Text
@@ -63,6 +63,7 @@ export const Home = () => {
             pt={"30px"}
             fontFamily={"Roboto"}
             fontSize={"16px"}
+            px={isLargerThan800 ? null : "20px"}
           >
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor <br /> invidunt ut labore et dolore magna
