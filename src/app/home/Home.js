@@ -55,7 +55,8 @@ export const Home = () => {
               px={isLargerThan800 ? null : "20px"}
             >
               The Best Software
-              {isLargerThan800 ? null : <br />} to Grow your Sales and Services
+              {isLargerThan800 ? null : <br />} to{" "}
+              {isLargerThan800 ? <br /> : null}Grow your Sales and Services
             </Text>
           </Box>
           <Text

@@ -21,22 +21,23 @@ const Partners = () => {
         gap={isLargerThan800 ? "100px" : "40px"}
         mt={"50px"}
         px={isLargerThan800 ? null : "20px"}
+        w={isLargerThan800 ? "100%" : "100%"}
       >
         <Box>
-          <Img src={partner1} w={isLargerThan800 ? "100%" : "100%"} />
+          <Img src={partner1} />
         </Box>
 
         <Box>
-          <Img src={partner2} w={isLargerThan800 ? "100%" : "100%"} />
+          <Img src={partner2} />
         </Box>
         <Box>
-          <Img src={partner3} w={isLargerThan800 ? "100%" : "100%"} />
+          <Img src={partner3} />
         </Box>
         <Box>
-          <Img src={partner4} w={isLargerThan800 ? "100%" : "100%"} />
+          <Img src={partner4} />
         </Box>
         <Box>
-          <Img src={partner5} w={isLargerThan800 ? "100%" : "100%"} />
+          <Img src={partner5} />
         </Box>
       </Box>
     </Box>
