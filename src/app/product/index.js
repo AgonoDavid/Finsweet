@@ -6,6 +6,7 @@ import dashboardimg from "../../assets/Dashboard image.png";
 import { useMediaQuery } from "@chakra-ui/react";
 import Partners from "../../components/partners";
 import SecondSection from "./components/secondsection";
+import Thirdsection from "./components/thirdsection";
 
 const Product = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
@@ -59,6 +60,7 @@ const Product = () => {
         <Partners />
       </Box>
       <SecondSection />
+      <Thirdsection />
     </Layout>
   );
 };

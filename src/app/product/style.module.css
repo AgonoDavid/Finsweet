@@ -17,3 +17,23 @@
     #d0d9f2 75%
   );
 }
+
+.thirdsectionBg {
+  background-image: url(../../assets/ProductPageImages/Side-Blur\ Gradient.png);
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100%;
+  height: 100vh;
+  margin-top: 150px;
+}
+
+.gradient {
+  /* Create a linear gradient as the text color, going from left to right */
+  background: linear-gradient(to right, #373fff 30%, #3acaf8 70%);
+  /* Set the background clip to text to make the gradient apply to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Set the text color to transparent to make the gradient visible */
+  color: transparent;
+}
