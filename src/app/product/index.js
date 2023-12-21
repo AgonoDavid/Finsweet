@@ -23,16 +23,32 @@ const Product = () => {
           justifyContent={"space-between"}
           w={"100%"}
           py={"50px"}
+          gap={"35px"}
         >
           <Box w={"50%"} my={"auto"}>
-            <Text>Grow your Sales and Services</Text>
-            <Text>
+            <Text fontSize={"55px"} fontWeight={"bold"}>
+              Grow your Sales and Services
+            </Text>
+            <Text my={"20px"}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
-            <Flex>
-              <Button>Get Started</Button>
-              <Button>Contact Us</Button>
+            <Flex gap={"10px"}>
+              <Button
+                bg={"black"}
+                textColor={"white"}
+                _hover={{ bg: "white", textColor: "black" }}
+              >
+                Get Started
+              </Button>
+              <Button
+                bg={"white"}
+                textColor={"black"}
+                _hover={{ bg: "black", textColor: "white" }}
+                border={"1px solid black"}
+              >
+                Contact Us
+              </Button>
             </Flex>
           </Box>
           <Box w={"50%"}>
