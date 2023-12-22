@@ -9,6 +9,8 @@ import SecondSection from "./components/secondsection";
 import Thirdsection from "./components/thirdsection";
 import Fourthsection from "./components/fourthsection";
 import Fifthsection from "./components/fifthsection";
+import Sixthsection from "./components/sixthsection";
+import Features from "../../components/features";
 
 const Product = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
@@ -65,6 +67,16 @@ const Product = () => {
       <Thirdsection />
       <Fourthsection />
       <Fifthsection />
+      <Sixthsection />
+      <Text
+        fontSize={"35px"}
+        fontWeight={"bold"}
+        pt={"80px"}
+        textAlign={"center"}
+      >
+        Features
+      </Text>
+      <Features />
     </Layout>
   );
 };

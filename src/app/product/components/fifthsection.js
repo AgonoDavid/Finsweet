@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Text, Img, Center } from "@chakra-ui/react";
-import performanceImg from "../../../assets/ProductPageImages/performance.png";
+import { Box, Text, Img } from "@chakra-ui/react";
 import styles from "../style.module.css";
+import datadrivenImg from "../../../assets/ProductPageImages/Data-drivenImg.png";
 
 const Fifthsection = () => {
   return (
@@ -31,7 +31,7 @@ const Fifthsection = () => {
             alignItems="center"
             height="80vh"
           >
-            <Img src={performanceImg} w={"95%"} />
+            <Img src={datadrivenImg} w={"80%"} />
           </Box>
         </Box>
       </Box>

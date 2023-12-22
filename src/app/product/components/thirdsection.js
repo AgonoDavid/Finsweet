@@ -8,7 +8,7 @@ const Thirdsection = () => {
     <Box className={styles.thirdsectionBg}>
       <Box maxW={"1100px"} m={"auto"}>
         <Box display={"flex"} justifyContent={"space-between"} gap={"50px"}>
-          <Box my={"auto"} w={"55%"}>
+          <Box my={"auto"} w={"60%"}>
             <Text
               className={styles.gradient}
               fontSize={"30px"}
@@ -17,7 +17,8 @@ const Thirdsection = () => {
               Marketing insights
             </Text>
             <Text fontSize={"48px"} fontWeight={"bold"} py={"20px"}>
-              Data-driven client feedback
+              Data-driven client
+              <br /> feedback
             </Text>
             <Text fontSize={"13px"}>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -26,8 +27,8 @@ const Thirdsection = () => {
               dolores et ea rebum. Stet clita kasd gubergren.
             </Text>
           </Box>
-          <Box w={"45%"}>
-            <Img src={datadrivenImg} />
+          <Box w={"40%"}>
+            <Img src={datadrivenImg} w={"100%"} />
           </Box>
         </Box>
       </Box>
