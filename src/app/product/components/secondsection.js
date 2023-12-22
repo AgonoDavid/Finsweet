@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Img } from "@chakra-ui/react";
+import { Box, Text, Img, Grid, useMediaQuery } from "@chakra-ui/react";
 import styles from "../style.module.css";
 import privacy from "../../../assets/ProductPageImages/Privacy.svg";
 import feat from "../../../assets/ProductPageImages/Feat.svg";
@@ -9,19 +9,21 @@ import collab from "../../../assets/ProductPageImages/Collaborate.svg";
 import sync from "../../../assets/ProductPageImages/Sync.svg";
 
 const SecondSection = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
     <Box className={styles.colorBg}>
       <Box>
         <Box>
           <Text
-            fontSize={"30px"}
+            fontSize={isLargerThan800 ? "30px" : "25px"}
             fontWeight={"bold"}
             py={"70px"}
             textAlign={"center"}
-            mt={"60px"}
+            mt={"40px"}
           >
             Get the best out of your company
-            <br /> with our service
+            {isLargerThan800 ? <br /> : null} with our service
           </Text>
         </Box>
         <Box
@@ -29,23 +31,28 @@ const SecondSection = () => {
           w={"97%"}
           borderTopRightRadius={"50px"}
         >
-          <Box maxW={"1100px"} m={"auto"} py={"80px"}>
-            <Box
-              display={"flex"}
-              justifyContent={"space-between"}
-              gap={"120px"}
+          <Box
+            maxW={isLargerThan800 ? "1100px" : "320px"}
+            m={"auto"}
+            py={"80px"}
+          >
+            <Grid
+              templateColumns={
+                isLargerThan800 ? "repeat(3,2fr)" : "repeat(2,1fr)"
+              }
+              gap={isLargerThan800 ? "120px" : "60px"}
             >
               <Box my={"auto"}>
                 <Img src={privacy} />
                 <Text
-                  fontSize={"20px"}
+                  fontSize={isLargerThan800 ? "20px" : "17px"}
                   fontWeight={"bold"}
                   fontFamily={"Roboto"}
                   py={"10px"}
                 >
                   Security and privacy
                 </Text>
-                <Text fontSize="13px">
+                <Text fontSize={isLargerThan800 ? "13px" : "11px"}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor.
                 </Text>
@@ -53,14 +60,14 @@ const SecondSection = () => {
               <Box my={"auto"}>
                 <Img src={built} />
                 <Text
-                  fontSize={"20px"}
+                  fontSize={isLargerThan800 ? "20px" : "17px"}
                   fontWeight={"bold"}
                   fontFamily={"Roboto"}
                   py={"10px"}
                 >
                   Built-in AI features
                 </Text>
-                <Text fontSize="13px">
+                <Text fontSize={isLargerThan800 ? "13px" : "11px"}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor.
                 </Text>
@@ -68,36 +75,29 @@ const SecondSection = () => {
               <Box my={"auto"}>
                 <Img src={collab} />
                 <Text
-                  fontSize={"20px"}
+                  fontSize={isLargerThan800 ? "20px" : "17px"}
                   fontWeight={"bold"}
                   fontFamily={"Roboto"}
                   py={"10px"}
                 >
                   Collaborate with others{" "}
                 </Text>
-                <Text fontSize="13px">
+                <Text fontSize={isLargerThan800 ? "13px" : "11px"}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor.
                 </Text>
               </Box>
-            </Box>
-            <Box
-              display={"flex"}
-              justifyContent={"space-between"}
-              gap={"120px"}
-              pt={"60px"}
-            >
               <Box my={"auto"}>
                 <Img src={sync} />
                 <Text
-                  fontSize={"20px"}
+                  fontSize={isLargerThan800 ? "20px" : "17px"}
                   fontWeight={"bold"}
                   fontFamily={"Roboto"}
                   py={"10px"}
                 >
                   Real time sync
                 </Text>
-                <Text fontSize="13px">
+                <Text fontSize={isLargerThan800 ? "13px" : "11px"}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor.
                 </Text>
@@ -105,14 +105,14 @@ const SecondSection = () => {
               <Box my={"auto"}>
                 <Img src={feat} />
                 <Text
-                  fontSize={"20px"}
+                  fontSize={isLargerThan800 ? "20px" : "17px"}
                   fontWeight={"bold"}
                   fontFamily={"Roboto"}
                   py={"10px"}
                 >
                   Built-in AI features{" "}
                 </Text>
-                <Text fontSize="13px">
+                <Text fontSize={isLargerThan800 ? "13px" : "11px"}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor.
                 </Text>
@@ -120,19 +120,19 @@ const SecondSection = () => {
               <Box my={"auto"}>
                 <Img src={easy} />
                 <Text
-                  fontSize={"20px"}
+                  fontSize={isLargerThan800 ? "20px" : "17px"}
                   fontWeight={"bold"}
                   fontFamily={"Roboto"}
                   py={"10px"}
                 >
                   Easy notes organization{" "}
                 </Text>
-                <Text fontSize="13px">
+                <Text fontSize={isLargerThan800 ? "13px" : "11px"}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor.
                 </Text>
               </Box>
-            </Box>
+            </Grid>
           </Box>
         </Box>
       </Box>

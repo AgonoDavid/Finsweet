@@ -26,20 +26,34 @@ const Product = () => {
           ]}
           m={"auto"}
           display={"flex"}
+          flexDir={isLargerThan800 ? "row" : "column"}
           justifyContent={"space-between"}
           w={"100%"}
           py={"60px"}
           gap={"35px"}
         >
-          <Box w={"50%"} my={"auto"}>
-            <Text fontSize={"55px"} fontWeight={"bold"}>
+          <Box
+            w={isLargerThan800 ? "50%" : "100%%"}
+            my={"auto"}
+            textAlign={isLargerThan800 ? "start" : "center"}
+          >
+            <Text
+              fontSize={[
+                isLargerThan800 ? "55px" : "35px",
+                isMdScreen ? "50px" : "65px",
+              ]}
+              fontWeight={"bold"}
+            >
               Grow your Sales and Services
             </Text>
             <Text my={"20px"}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
-            <Flex gap={"10px"}>
+            <Flex
+              gap={"10px"}
+              justifyContent={isLargerThan800 ? "start" : "center"}
+            >
               <Button
                 bg={"black"}
                 textColor={"white"}
@@ -57,7 +71,7 @@ const Product = () => {
               </Button>
             </Flex>
           </Box>
-          <Box w={"50%"}>
+          <Box w={isLargerThan800 ? "50%" : "100%"}>
             <Img src={dashboardimg} />
           </Box>
         </Box>

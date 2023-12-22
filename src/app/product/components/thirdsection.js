@@ -1,22 +1,37 @@
 import React from "react";
-import { Box, Img, Text } from "@chakra-ui/react";
+import { Box, Img, Text, useMediaQuery } from "@chakra-ui/react";
 import styles from "../style.module.css";
 import datadrivenImg from "../../../assets/ProductPageImages/Data-drivenImg.png";
 
 const Thirdsection = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
     <Box className={styles.thirdsectionBg}>
-      <Box maxW={"1100px"} m={"auto"}>
-        <Box display={"flex"} justifyContent={"space-between"} gap={"50px"}>
-          <Box my={"auto"} w={"60%"}>
+      <Box maxW={isLargerThan800 ? "1100px" : "320px"} m={"auto"}>
+        <Box
+          display={"flex"}
+          flexDir={isLargerThan800 ? "row" : "column"}
+          justifyContent={"space-between"}
+          gap={"50px"}
+        >
+          <Box
+            my={"auto"}
+            w={isLargerThan800 ? "60%" : "100%"}
+            textAlign={isLargerThan800 ? "start" : "center"}
+          >
             <Text
               className={styles.gradient}
-              fontSize={"30px"}
+              fontSize={isLargerThan800 ? "30px" : "20px"}
               fontWeight={"bold"}
             >
               Marketing insights
             </Text>
-            <Text fontSize={"48px"} fontWeight={"bold"} py={"20px"}>
+            <Text
+              fontSize={isLargerThan800 ? "48px" : "33px"}
+              fontWeight={"bold"}
+              py={"20px"}
+            >
               Data-driven client
               <br /> feedback
             </Text>
@@ -27,8 +42,8 @@ const Thirdsection = () => {
               dolores et ea rebum. Stet clita kasd gubergren.
             </Text>
           </Box>
-          <Box w={"40%"}>
-            <Img src={datadrivenImg} w={"100%"} />
+          <Box w={isLargerThan800 ? "40%" : "100%"}>
+            <Img src={datadrivenImg} w={isLargerThan800 ? "100%" : "90%"} />
           </Box>
         </Box>
       </Box>
