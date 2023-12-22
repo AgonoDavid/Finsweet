@@ -18,7 +18,10 @@ export const Card = () => {
         bg={"#E0E4FC"}
         rounded={"10px"}
         display={"flex"}
-        flexDir={isLargerThan800 ? "row" : "column"}
+        flexDir={[
+          isLargerThan800 ? "row" : "column",
+          isMdScreen ? "row" : "row",
+        ]}
         justifyContent={"space-between"}
         gap={"30px"}
         p={"70px"}
@@ -32,7 +35,10 @@ export const Card = () => {
           <Img src={secure} pb={"5"} />
           <Box>
             <Text
-              fontSize={isLargerThan800 ? "30px" : "20px"}
+              fontSize={[
+                isLargerThan800 ? "30px" : "20px",
+                isMdScreen ? "25px" : null,
+              ]}
               fontWeight={"bold"}
               fontFamily={"Roboto"}
             >
@@ -47,7 +53,10 @@ export const Card = () => {
         <Box>
           <Img src={premium} pb={"15px"} />
           <Text
-            fontSize={isLargerThan800 ? "30px" : "20px"}
+            fontSize={[
+              isLargerThan800 ? "30px" : "20px",
+              isMdScreen ? "25px" : null,
+            ]}
             fontWeight={"bold"}
             fontFamily={"Roboto"}
           >
@@ -61,7 +70,10 @@ export const Card = () => {
         <Box>
           <Img src={support} pb={"15px"} />
           <Text
-            fontSize={isLargerThan800 ? "30px" : "20px"}
+            fontSize={[
+              isLargerThan800 ? "30px" : "20px",
+              isMdScreen ? "25px" : null,
+            ]}
             fontWeight={"bold"}
             fontFamily={"Roboto"}
           >

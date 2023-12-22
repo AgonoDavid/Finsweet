@@ -23,13 +23,19 @@ const Features = () => {
         p={isLargerThan800 ? "70px" : "40px"}
         mt={"50px"}
         flexDir={isLargerThan800 ? "row" : "column"}
-        align={isLargerThan800 ? "start" : "center"}
+        align={
+          (isLargerThan800 ? "start" : "center",
+          isMdScreen ? "center" : "start")
+        }
       >
         <Box>
           <Img src={advanced} />
           <Box>
             <Text
-              fontSize={isLargerThan800 ? "30px" : "20px"}
+              fontSize={[
+                isLargerThan800 ? "30px" : "20px",
+                isMdScreen ? "20px" : null,
+              ]}
               fontWeight={"bold"}
             >
               Advanced 256-bit encryption
@@ -44,7 +50,10 @@ const Features = () => {
         <Box>
           <Img src={simple} />
           <Text
-            fontSize={isLargerThan800 ? "30px" : "20px"}
+            fontSize={[
+              isLargerThan800 ? "30px" : "20px",
+              isMdScreen ? "20px" : null,
+            ]}
             fontWeight={"bold"}
           >
             Simple collaboration tools
@@ -58,7 +67,10 @@ const Features = () => {
         <Box>
           <Img src={customizable} />
           <Text
-            fontSize={isLargerThan800 ? "30px" : "20px"}
+            fontSize={[
+              isLargerThan800 ? "30px" : "20px",
+              isMdScreen ? "20px" : null,
+            ]}
             fontWeight={"bold"}
           >
             Customizable AI features
