@@ -1,24 +1,39 @@
 import React from "react";
 import styles from "../style.module.css";
-import { Box, Img, Text } from "@chakra-ui/react";
+import { Box, Img, Text, useMediaQuery } from "@chakra-ui/react";
 import performanceImg from "../../../assets/ProductPageImages/performance.png";
 
 const Sixthsection = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
-    <Box maxW={"1100px"} m={"auto"}>
-      <Box display={"flex"} justifyContent={"space-between"} gap={"50px"}>
-        <Box w={"55%"}>
-          <Img src={performanceImg} w={"85%"} />
+    <Box maxW={isLargerThan800 ? "1100px" : "320px"} m={"auto"}>
+      <Box
+        display={"flex"}
+        flexDir={isLargerThan800 ? "row" : "column-reverse"}
+        justifyContent={"space-between"}
+        gap={"50px"}
+      >
+        <Box w={isLargerThan800 ? "55%" : "100%"}>
+          <Img src={performanceImg} w={isLargerThan800 ? "85%" : "100%"} />
         </Box>
-        <Box my={"auto"} w={"45%"}>
+        <Box
+          my={"auto"}
+          w={isLargerThan800 ? "45%" : "100%"}
+          textAlign={isLargerThan800 ? "start" : "center"}
+        >
           <Text
             className={styles.gradient}
-            fontSize={"30px"}
+            fontSize={isLargerThan800 ? "30px" : "20px"}
             fontWeight={"bold"}
           >
             Remote teams{" "}
           </Text>
-          <Text fontSize={"40px"} fontWeight={"bold"} py={"15px"}>
+          <Text
+            fontSize={isLargerThan800 ? "40px" : "33px"}
+            fontWeight={"bold"}
+            py={"15px"}
+          >
             Real-time collaboration{" "}
           </Text>
           <Text fontSize={"13px"}>

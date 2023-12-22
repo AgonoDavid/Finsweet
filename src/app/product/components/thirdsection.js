@@ -13,10 +13,10 @@ const Thirdsection = () => {
           display={"flex"}
           flexDir={isLargerThan800 ? "row" : "column"}
           justifyContent={"space-between"}
-          gap={"50px"}
+          gap={isLargerThan800 ? "50px" : "70px"}
         >
           <Box
-            my={"auto"}
+            my={isLargerThan800 ? "auto" : "-30px"}
             w={isLargerThan800 ? "60%" : "100%"}
             textAlign={isLargerThan800 ? "start" : "center"}
           >
