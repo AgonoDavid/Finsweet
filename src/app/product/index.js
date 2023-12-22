@@ -7,6 +7,8 @@ import { useMediaQuery } from "@chakra-ui/react";
 import Partners from "../../components/partners";
 import SecondSection from "./components/secondsection";
 import Thirdsection from "./components/thirdsection";
+import Fourthsection from "./components/fourthsection";
+import Fifthsection from "./components/fifthsection";
 
 const Product = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
@@ -61,6 +63,8 @@ const Product = () => {
       </Box>
       <SecondSection />
       <Thirdsection />
+      <Fourthsection />
+      <Fifthsection />
     </Layout>
   );
 };

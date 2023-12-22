@@ -16,7 +16,7 @@ const Thirdsection = () => {
             >
               Marketing insights
             </Text>
-            <Text fontSize={"52px"} fontWeight={"bold"} py={"20px"}>
+            <Text fontSize={"48px"} fontWeight={"bold"} py={"20px"}>
               Data-driven client feedback
             </Text>
             <Text fontSize={"13px"}>

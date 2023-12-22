@@ -30,10 +30,34 @@
 
 .gradient {
   /* Create a linear gradient as the text color, going from left to right */
-  background: linear-gradient(to right, #373fff 30%, #3acaf8 70%);
+  background: linear-gradient(to right, #373fff 5%, #3acaf890 95%);
   /* Set the background clip to text to make the gradient apply to the text */
   -webkit-background-clip: text;
   background-clip: text;
   /* Set the text color to transparent to make the gradient visible */
   color: transparent;
+}
+
+.fifthsectionBg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 150px;
+}
+
+.fifthsectionBg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../../assets/ProductPageImages/fifthblurbg.png);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(20px); /* Adjust the blur value as needed */
+  z-index: -1; /* Place it behind the content */
+  width: 100%;
+  height: 100%;
 }
