@@ -12,7 +12,7 @@ const SecondSection = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
-    <Box className={styles.colorBg}>
+    <Box className={styles.colorBg} mt={"160px"}>
       <Box>
         <Box>
           <Text
@@ -20,7 +20,7 @@ const SecondSection = () => {
             fontWeight={"bold"}
             py={"70px"}
             textAlign={"center"}
-            mt={"40px"}
+            // mt={"40px"}
           >
             Get the best out of your company
             {isLargerThan800 ? <br /> : null} with our service

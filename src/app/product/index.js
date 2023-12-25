@@ -29,7 +29,7 @@ const Product = () => {
           flexDir={isLargerThan800 ? "row" : "column"}
           justifyContent={"space-between"}
           w={"100%"}
-          py={"60px"}
+          py={"50px"}
           gap={"35px"}
         >
           <Box
@@ -40,7 +40,7 @@ const Product = () => {
             <Text
               fontSize={[
                 isLargerThan800 ? "55px" : "35px",
-                isMdScreen ? "50px" : "65px",
+                isMdScreen ? "40px" : "65px",
               ]}
               fontWeight={"bold"}
             >
