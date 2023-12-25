@@ -19,9 +19,10 @@ const Partners = () => {
         display={"flex"}
         justifyContent={"space-between"}
         gap={isLargerThan800 ? "100px" : "40px"}
-        mt={"50px"}
+        mt={"90px"}
         px={isLargerThan800 ? null : "20px"}
         w={isLargerThan800 ? "100%" : "100%"}
+        mb={"30px"}
       >
         <Box>
           <Img src={partner1} />
