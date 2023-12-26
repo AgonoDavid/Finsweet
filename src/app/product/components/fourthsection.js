@@ -7,7 +7,10 @@ const Fourthsection = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
-    <Box maxW={isLargerThan800 ? "1100px" : "320px"} m={"auto"}>
+    <Box
+      maxW={[isLargerThan800 ? "1100px" : "320px", isMdScreen ? "750px" : null]}
+      m={"auto"}
+    >
       <Box
         display={"flex"}
         flexDir={isLargerThan800 ? "row" : "column-reverse"}
@@ -31,7 +34,10 @@ const Fourthsection = () => {
             Time Tracker
           </Text>
           <Text
-            fontSize={isLargerThan800 ? "48px" : "33px"}
+            fontSize={[
+              isLargerThan800 ? "48px" : "33px",
+              isMdScreen ? "35px" : null,
+            ]}
             fontWeight={"bold"}
             py={"15px"}
           >

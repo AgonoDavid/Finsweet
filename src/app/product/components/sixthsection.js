@@ -7,7 +7,11 @@ const Sixthsection = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
-    <Box maxW={isLargerThan800 ? "1100px" : "320px"} m={"auto"}>
+    <Box
+      maxW={[isLargerThan800 ? "1100px" : "320px", isMdScreen ? "750px" : null]}
+      m={"auto"}
+      my={isMdScreen ? "130px" : null}
+    >
       <Box
         display={"flex"}
         flexDir={isLargerThan800 ? "row" : "column-reverse"}

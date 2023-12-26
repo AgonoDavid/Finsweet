@@ -8,9 +8,9 @@ const Fifthsection = () => {
   const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
     <Box
-      maxW={isLargerThan800 ? "1100px" : "320px"}
+      maxW={[isLargerThan800 ? "1100px" : "320px", isMdScreen ? "750px" : null]}
       m={"auto"}
-      mt={isLargerThan800 ? null : "130px"}
+      my={isLargerThan800 ? "50px" : "130px"}
     >
       <Box
         display={"flex"}
@@ -31,7 +31,10 @@ const Fifthsection = () => {
             Lead Generation
           </Text>
           <Text
-            fontSize={isLargerThan800 ? "45px" : "33px"}
+            fontSize={[
+              isLargerThan800 ? "45px" : "33px",
+              isMdScreen ? "35px" : null,
+            ]}
             fontWeight={"bold"}
             py={"15px"}
           >
@@ -51,7 +54,7 @@ const Fifthsection = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            height={isLargerThan800 ? "80vh" : "20vh"}
+            height={isLargerThan800 ? "auto" : "auto"}
           >
             <Img src={datadrivenImg} w={isLargerThan800 ? "80%" : "100%"} />
           </Box>

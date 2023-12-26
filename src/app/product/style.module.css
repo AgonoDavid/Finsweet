@@ -41,7 +41,7 @@
 .fifthsectionBg {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   margin-top: 150px;
 }
 
@@ -59,14 +59,14 @@
   filter: blur(20px); /* Adjust the blur value as needed */
   z-index: -1; /* Place it behind the content */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 @media (max-width: 800px) {
   .fifthsectionBg {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: fit-content;
     margin-top: 150px;
   }
   .fifthsectionBg::before {
@@ -83,6 +83,6 @@
     filter: blur(20px); /* Adjust the blur value as needed */
     z-index: -1; /* Place it behind the content */
     width: 100%;
-    height: 60%;
+    height: 100%;
   }
 }

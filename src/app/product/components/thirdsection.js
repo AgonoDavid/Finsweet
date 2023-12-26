@@ -10,6 +10,7 @@ const Thirdsection = () => {
     <Box
       className={styles.thirdsectionBg}
       py={[isMdScreen ? "140px" : "100px"]}
+      mb={"90px"}
     >
       <Box
         maxW={[
