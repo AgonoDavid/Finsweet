@@ -32,7 +32,10 @@ const SecondSection = () => {
           borderTopRightRadius={"50px"}
         >
           <Box
-            maxW={isLargerThan800 ? "1100px" : "320px"}
+            maxW={[
+              isLargerThan800 ? "1100px" : "320px",
+              isMdScreen ? "730px" : null,
+            ]}
             m={"auto"}
             py={"80px"}
           >
@@ -40,7 +43,10 @@ const SecondSection = () => {
               templateColumns={
                 isLargerThan800 ? "repeat(3,2fr)" : "repeat(2,1fr)"
               }
-              gap={isLargerThan800 ? "120px" : "60px"}
+              gap={[
+                isLargerThan800 ? "120px" : "60px",
+                isMdScreen ? "90px" : null,
+              ]}
             >
               <Box my={"auto"}>
                 <Img src={privacy} />

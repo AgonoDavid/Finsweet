@@ -7,8 +7,17 @@ const Thirdsection = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
-    <Box className={styles.thirdsectionBg}>
-      <Box maxW={isLargerThan800 ? "1100px" : "320px"} m={"auto"}>
+    <Box
+      className={styles.thirdsectionBg}
+      py={[isMdScreen ? "140px" : "100px"]}
+    >
+      <Box
+        maxW={[
+          isLargerThan800 ? "1100px" : "320px",
+          isMdScreen ? "750px" : null,
+        ]}
+        m={"auto"}
+      >
         <Box
           display={"flex"}
           flexDir={isLargerThan800 ? "row" : "column"}
