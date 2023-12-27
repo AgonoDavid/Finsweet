@@ -77,7 +77,7 @@ const Secondsection = () => {
               gap={"10px"}
             >
               <Text fontSize={"12px"}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                Lorem ipsum dolor sit amet, <br /> consetetur sadipscing elitr.
               </Text>
               <Box py={"10px"}>
                 <Text fontWeight={"bold"} fontSize={"28px"}>
@@ -157,7 +157,7 @@ const Secondsection = () => {
               gap={"10px"}
             >
               <Text fontSize={"12px"}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                Lorem ipsum dolor sit amet, <br /> consetetur sadipscing elitr.
               </Text>
               <Box py={"10px"}>
                 <Text fontWeight={"bold"} fontSize={"28px"}>
@@ -237,7 +237,7 @@ const Secondsection = () => {
               gap={"10px"}
             >
               <Text fontSize={"12px"}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                Lorem ipsum dolor sit amet, <br /> consetetur sadipscing elitr.
               </Text>
               <Box py={"10px"}>
                 <Text fontWeight={"bold"} fontSize={"28px"}>
