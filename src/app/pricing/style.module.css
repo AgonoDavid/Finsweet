@@ -11,12 +11,13 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 50%;
+  width: 100%; /* Cover the entire viewport width */
   background-image: url(../../assets/ProductPageImages/Side-Blur\ Gradient.png);
   object-fit: contain;
   background-repeat: no-repeat;
   background-position: left;
-  z-index: -1; /* Place the background image behind the content */
+  z-index: -1;
+  filter: blur(10px); /* Adjust the blur value as needed */
 }
 
 .bg::before {
@@ -31,7 +32,7 @@
 /* Your content styles */
 .content {
   position: relative;
-  z-index: 1; /* Place the content on top of the background image */
+  z-index: 1;
 }
 
 .colorBg {
