@@ -7,7 +7,7 @@ import ct2 from "../../assets/ct2.png";
 import ct3 from "../../assets/ct3.png";
 
 const Contact = () => {
-  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isLargerThan800] = useMediaQuery("(min-width: 760px)");
   const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
     <Layout>
@@ -30,18 +30,25 @@ const Contact = () => {
           <Box
             mt={"30px"}
             bg={"#F0F2FE"}
-            py={"10px"}
+            py={"20px"}
             px={"50px"}
             rounded={"15px"}
             justifyContent={"space-between"}
-            gap={"48px"}
+            gap={isLargerThan800 ? "48px" : "10px"}
             display={"flex"}
+            flexDirection={isLargerThan800 ? "row" : "column"}
           >
-            <Box my={"40px"} w={"70%"}>
-              <Text fontSize={"29px"} fontWeight={"bold"}>
+            <Box my={"40px"} w={isLargerThan800 ? "70%" : "100%"}>
+              <Text
+                fontSize={"29px"}
+                fontWeight={"bold"}
+                textAlign={isLargerThan800 ? "start" : "center"}
+              >
                 Drop us a message
               </Text>
-              <Text>We will get back to you as soon as possible.</Text>
+              <Text textAlign={isLargerThan800 ? "start" : "center"}>
+                We will get back to you as soon as possible.
+              </Text>
               <Box>
                 <form>
                   <Box
@@ -107,7 +114,7 @@ const Contact = () => {
                 </form>
               </Box>
             </Box>
-            <Box w={"30%"} my={"auto"}>
+            <Box w={isLargerThan800 ? "30%" : "100%"} my={"auto"}>
               <Box display={"flex"} flexDirection={"column"} gap={"20px"}>
                 <Box display={"flex"} gap={"10px"}>
                   <Box my={"auto"} w={"12%"}>
