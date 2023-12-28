@@ -43,7 +43,7 @@ const Pricing = () => {
             px={"10px"}
             rounded={"15px"}
             justifyContent={"space-between"}
-            gap={"15px"}
+            gap={"18px"}
             display={"flex"}
           >
             <Button bg={"black"} textColor={"white"}>

@@ -1,11 +1,13 @@
-import React from "react";
-import { Box, Text, Button, Grid, Flex, Img } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, Text, Button, Grid, Img } from "@chakra-ui/react";
 import Price1 from "../../../assets/price-1.png";
 import Price2 from "../../../assets/price-2.png";
 import Price3 from "../../../assets/price-3.png";
 import line from "../../../assets/Line.png";
 import check from "../../../assets/check.svg";
 import styles from "../style.module.css";
+import open from "../../../assets/open.png";
+import close from "../../../assets/close.png";
 
 const Secondsection = () => {
   return (
@@ -252,8 +254,96 @@ const Secondsection = () => {
           </Box>
         </Box>
       </Grid>
+      <Card />
     </Box>
   );
 };
 
 export default Secondsection;
+
+const Card = () => {
+  return (
+    <Box
+      display={"flex"}
+      justifyContent={"space-between"}
+      bg={"#F0F2FE"}
+      mt={"80px"}
+      rounded={"10px"}
+      py={"60px"}
+      px={"40px"}
+      gap={"20px"}
+    >
+      <Box textAlign={"start"} w={"50%"}>
+        <Text fontWeight={"bold"} fontSize={"50px"}>
+          Frequestly Asked Questions
+        </Text>
+        <Text py={"20px"}>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt.
+        </Text>
+      </Box>
+      <AccordionItems />
+    </Box>
+  );
+};
+
+const Accordion = ({ title, content }) => {
+  const [isOpen, setIsopen] = useState(false);
+
+  return (
+    <Box w={"100%"}>
+      <Box bg={"white"} rounded={"15px"}>
+        <Box display={"flex"} justifyContent={"space-between"}>
+          <Box my={"auto"} p={"30px"}>
+            <Text fontWeight={"bold"} fontSize={"18px"}>
+              {title}{" "}
+            </Text>
+          </Box>
+          <Box my={"auto"} p={"20px"}>
+            {isOpen ? (
+              <Img onClick={() => setIsopen(!isOpen)} src={close} w={"70%"} />
+            ) : (
+              <Img onClick={() => setIsopen(!isOpen)} src={open} w={"70%"} />
+            )}
+          </Box>
+        </Box>
+        {isOpen && (
+          <Box textAlign={"start"} px={"30px"} pb={"10px"} fontSize={"13px"}>
+            {content}
+          </Box>
+        )}
+      </Box>
+    </Box>
+  );
+};
+
+const AccordionItems = () => {
+  return (
+    <Box w={"50%"} display={"flex"} flexDirection={"column"} gap={"20px"}>
+      <Accordion
+        title={"How do I grow my business?"}
+        content={
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.b"
+        }
+      />
+      <Accordion
+        title={"Can I cancel my subscription?"}
+        content={
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.b"
+        }
+      />
+      <Accordion
+        title={"How do I contact the support?"}
+        content={
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.b"
+        }
+      />
+      <Accordion
+        title={"Is a credit card required?"}
+        content={
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.b"
+        }
+      />
+    </Box>
+  );
+};
