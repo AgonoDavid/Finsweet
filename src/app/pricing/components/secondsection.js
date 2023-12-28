@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Text, Button, Grid, Img } from "@chakra-ui/react";
+import { Box, Text, Button, Grid, Img, useMediaQuery } from "@chakra-ui/react";
 import Price1 from "../../../assets/price-1.png";
 import Price2 from "../../../assets/price-2.png";
 import Price3 from "../../../assets/price-3.png";
@@ -10,9 +10,15 @@ import open from "../../../assets/open.png";
 import close from "../../../assets/close.png";
 
 const Secondsection = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 760px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
-    <Box maxW={"1100px"} m={"auto"}>
-      <Grid templateColumns={"repeat(3,1fr)"} mt={"90px"} gap={"70px"}>
+    <Box maxW={isMdScreen ? "740px" : "1100px"} m={"auto"}>
+      <Grid
+        templateColumns={isLargerThan800 ? "repeat(3,1fr)" : "repeat(1,1fr)"}
+        mt={"90px"}
+        gap={isMdScreen ? "20px" : "70px"}
+      >
         <Box
           border={"1px solid white"}
           bg={"white"}
@@ -262,6 +268,8 @@ const Secondsection = () => {
 export default Secondsection;
 
 const Card = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
     <Box
       display={"flex"}
@@ -272,12 +280,20 @@ const Card = () => {
       py={"60px"}
       px={"40px"}
       gap={"20px"}
+      flexDirection={isLargerThan800 ? "row" : "column"}
     >
-      <Box textAlign={"start"} w={"50%"}>
-        <Text fontWeight={"bold"} fontSize={"50px"}>
+      <Box textAlign={"start"} w={isLargerThan800 ? "50%" : "100%"}>
+        <Text
+          fontWeight={"bold"}
+          fontSize={[
+            isLargerThan800 ? "50px" : "30px",
+            isMdScreen ? "35px" : null,
+          ]}
+          textAlign={isLargerThan800 ? "start" : "center"}
+        >
           Frequestly Asked Questions
         </Text>
-        <Text py={"20px"}>
+        <Text py={"20px"} textAlign={isLargerThan800 ? "start" : "center"}>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt.
         </Text>
@@ -288,6 +304,8 @@ const Card = () => {
 };
 
 const Accordion = ({ title, content }) => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   const [isOpen, setIsopen] = useState(false);
 
   return (
@@ -295,7 +313,11 @@ const Accordion = ({ title, content }) => {
       <Box bg={"white"} rounded={"15px"}>
         <Box display={"flex"} justifyContent={"space-between"}>
           <Box my={"auto"} p={"30px"}>
-            <Text fontWeight={"bold"} fontSize={"18px"}>
+            <Text
+              fontWeight={"bold"}
+              fontSize={isLargerThan800 ? "18px" : "15px"}
+              textAlign={isLargerThan800 ? "start" : "start"}
+            >
               {title}{" "}
             </Text>
           </Box>
@@ -318,8 +340,15 @@ const Accordion = ({ title, content }) => {
 };
 
 const AccordionItems = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
-    <Box w={"50%"} display={"flex"} flexDirection={"column"} gap={"20px"}>
+    <Box
+      w={isLargerThan800 ? "50%" : "100%"}
+      display={"flex"}
+      flexDirection={"column"}
+      gap={"20px"}
+    >
       <Accordion
         title={"How do I grow my business?"}
         content={
