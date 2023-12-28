@@ -121,7 +121,7 @@ const Contact = () => {
                     <Img src={ct1} w={"100%"} />
                   </Box>
                   <Box>
-                    <Text fontWeight={"bold"} fontSize={"19px"}>
+                    <Text fontWeight={"bold"} fontSize={"17px"}>
                       + 1800 145 276
                     </Text>
                     <Text fontSize={"12px"}>Free support</Text>
@@ -132,7 +132,7 @@ const Contact = () => {
                     <Img src={ct2} w={"100%"} />
                   </Box>
                   <Box>
-                    <Text fontWeight={"bold"} fontSize={"19px"}>
+                    <Text fontWeight={"bold"} fontSize={"17px"}>
                       finsweet@gmail.com{" "}
                     </Text>
                     <Text fontSize={"12px"}>Help Email support</Text>
@@ -143,7 +143,7 @@ const Contact = () => {
                     <Img src={ct3} w={"100%"} />
                   </Box>
                   <Box>
-                    <Text fontWeight={"bold"} fontSize={"19px"}>
+                    <Text fontWeight={"bold"} fontSize={"17px"}>
                       sales@finsweet.com{" "}
                     </Text>
                     <Text fontSize={"12px"}>Sales Enquiry</Text>
