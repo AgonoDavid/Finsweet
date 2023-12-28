@@ -1,0 +1,36 @@
+.bg {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.bg::before,
+.bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; /* Cover the entire viewport width */
+  background-image: url(../../assets/ProductPageImages/Side-Blur\ Gradient.png);
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  z-index: -1;
+  filter: blur(10px); /* Adjust the blur value as needed */
+}
+
+.bg::before {
+  left: 0;
+}
+
+.bg::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* Your content styles */
+.content {
+  position: relative;
+  z-index: 1;
+}
