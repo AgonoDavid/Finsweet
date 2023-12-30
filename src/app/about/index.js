@@ -7,6 +7,7 @@ import Img2 from "../../assets/man-working-from-home-5198252.png";
 import Img3 from "../../assets/people-working-in-front-of-the-computer-3184357.png";
 import Card from "./components/card";
 import Thirdcard from "./components/thirdcard";
+import Fourthcard from "./components/fourthcard";
 
 const About = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 760px)");
@@ -21,7 +22,7 @@ const About = () => {
           ]}
           m={"auto"}
         >
-          <Box py={"80px"}>
+          <Box py={"70px"}>
             <Box textAlign={"center"}>
               <Text fontSize={"40px"} fontWeight={"bold"}>
                 We are proud of our products
@@ -60,7 +61,7 @@ const About = () => {
           >
             <Text
               className={styles.gradient}
-              fontSize={"20px"}
+              fontSize={"22px"}
               fontWeight={"bold"}
             >
               About Us
@@ -79,7 +80,7 @@ const About = () => {
         </Box>
         <Card />
         <Box textAlign={"center"} pt={"100px"} pb={"30px"}>
-          <Text fontWeight={"bold"} fontSize={"30px"}>
+          <Text fontWeight={"bold"} fontSize={"38px"}>
             Our corporate values
           </Text>
           <Text fontSize={"13px"}>
@@ -88,6 +89,7 @@ const About = () => {
           </Text>
         </Box>
         <Thirdcard />
+        <Fourthcard />
       </Box>
     </Layout>
   );
