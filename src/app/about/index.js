@@ -22,7 +22,7 @@ const About = () => {
           ]}
           m={"auto"}
         >
-          <Box py={"70px"}>
+          <Box pt={"70px"}>
             <Box textAlign={"center"}>
               <Text fontSize={"40px"} fontWeight={"bold"}>
                 We are proud of our products

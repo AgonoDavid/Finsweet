@@ -1,18 +1,25 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import styles from "../style.module.css";
 
 const Card = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 760px)");
+  const [isMdScreen] = useMediaQuery(" (max-width: 1024px)");
   return (
     <Box bg={"#F0F2FE"}>
       <Box
-        maxW={"1100px"}
+        maxW={[
+          isLargerThan800 ? "1150px" : "330px",
+          isMdScreen ? "750px" : null,
+        ]}
         m={"auto"}
         display={"flex"}
+        flexDirection={isLargerThan800 ? "row" : "column"}
         justifyContent={"space-between"}
         gap={"60px"}
         py={"30px"}
         mt={"60px"}
+        textAlign={isLargerThan800 ? "start" : "center"}
       >
         <Box display={"flex"} flexDirection={"column"} gap={"20px"}>
           <Text

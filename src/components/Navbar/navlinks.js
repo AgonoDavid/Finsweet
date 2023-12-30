@@ -38,12 +38,7 @@ const Navlinks = () => {
           About
         </Text>
       </Link>
-      {/*blog link*/}
-      <Link to="/blog">
-        <Text _hover={{ fontWeight: "bold", textDecoration: "underline" }}>
-          Blog
-        </Text>
-      </Link>
+
       {/*contact link*/}
       <Link to="/contact">
         <Text _hover={{ fontWeight: "bold", textDecoration: "underline" }}>

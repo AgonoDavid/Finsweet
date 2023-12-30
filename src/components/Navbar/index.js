@@ -1,10 +1,11 @@
 import React from "react";
 import Navlinks from "./navlinks";
 import logo from "../../assets/Logo.png";
-import { Box, Link, useMediaQuery, Img } from "@chakra-ui/react";
+import { Box, useMediaQuery, Img } from "@chakra-ui/react";
 import { useState } from "react";
 import MenuIconImg from "../../assets/icon hamburger.png";
 import Mobile from "./components/Mobile";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);

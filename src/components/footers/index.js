@@ -38,10 +38,7 @@ const Footer = () => {
       name: "Terms and Condition",
       to: "#",
     },
-    {
-      name: "Blog",
-      to: "/blog",
-    },
+
     {
       name: "Contact Us",
       to: "/contact",
