@@ -80,12 +80,15 @@ const About = () => {
         </Box>
         <Card />
         <Box textAlign={"center"} pt={"100px"} pb={"30px"}>
-          <Text fontWeight={"bold"} fontSize={"38px"}>
+          <Text
+            fontWeight={"bold"}
+            fontSize={isLargerThan800 ? "38px" : "26px"}
+          >
             Our corporate values
           </Text>
           <Text fontSize={"13px"}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy.
+            Lorem ipsum dolor sit amet, consetetur
+            {isLargerThan800 ? null : <br />}sadipscing elitr, sed diam nonumy.
           </Text>
         </Box>
         <Thirdcard />

@@ -10,7 +10,7 @@ const Card = () => {
       <Box
         maxW={[
           isLargerThan800 ? "1150px" : "330px",
-          isMdScreen ? "750px" : null,
+          isMdScreen ? "730px" : null,
         ]}
         m={"auto"}
         display={"flex"}
@@ -21,7 +21,12 @@ const Card = () => {
         mt={"60px"}
         textAlign={isLargerThan800 ? "start" : "center"}
       >
-        <Box display={"flex"} flexDirection={"column"} gap={"20px"}>
+        <Box
+          display={"flex"}
+          flexDirection={"column"}
+          gap={"20px"}
+          textAlign={isMdScreen ? "center" : "start"}
+        >
           <Text
             className={styles.gradient}
             fontWeight={"bold"}
@@ -29,7 +34,7 @@ const Card = () => {
           >
             Our Goals
           </Text>
-          <Text fontSize={"35px"} fontWeight={"bold"}>
+          <Text fontSize={isMdScreen ? "25px" : "35px"} fontWeight={"bold"}>
             To upscale your business <br />
             to the next level
           </Text>
@@ -40,7 +45,12 @@ const Card = () => {
             et ea rebum.
           </Text>
         </Box>
-        <Box display={"flex"} flexDirection={"column"} gap={"20px"}>
+        <Box
+          display={"flex"}
+          flexDirection={"column"}
+          gap={"20px"}
+          textAlign={isMdScreen ? "center" : "start"}
+        >
           <Text
             className={styles.gradient}
             fontWeight={"bold"}
@@ -48,7 +58,7 @@ const Card = () => {
           >
             Our Vision{" "}
           </Text>
-          <Text fontSize={"35px"} fontWeight={"bold"}>
+          <Text fontSize={isMdScreen ? "25px" : "35px"} fontWeight={"bold"}>
             To provide solutions for growing companies
           </Text>
           <Text fontSize={"13px"}>
