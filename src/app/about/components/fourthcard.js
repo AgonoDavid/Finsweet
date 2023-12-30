@@ -4,6 +4,8 @@ import team1 from "../../../assets/team1.png";
 import team2 from "../../../assets/team2.png";
 import team3 from "../../../assets/team3.png";
 import team4 from "../../../assets/team4.png";
+import team5 from "../../../assets/team5.png";
+import team6 from "../../../assets/team6.png";
 
 const Fourthcard = () => {
   return (
@@ -33,7 +35,7 @@ const Fourthcard = () => {
             </Box>
             <Box bg={"#E0E4FC"} rounded={"10px"}>
               <Box>
-                <Img src={team2} />
+                <Img src={team6} />
               </Box>
               <Box p={"15px"}>
                 <Text fontSize={"17px"} fontWeight={"bold"}>
@@ -44,7 +46,7 @@ const Fourthcard = () => {
             </Box>
             <Box bg={"#E0E4FC"} rounded={"10px"}>
               <Box>
-                <Img src={team3} />
+                <Img src={team2} />
               </Box>
               <Box p={"15px"}>
                 <Text fontSize={"17px"} fontWeight={"bold"}>
@@ -55,7 +57,7 @@ const Fourthcard = () => {
             </Box>
             <Box bg={"#E0E4FC"} rounded={"10px"}>
               <Box>
-                <Img src={team4} />
+                <Img src={team5} />
               </Box>
               <Box p={"15px"}>
                 <Text fontSize={"17px"} fontWeight={"bold"}>
@@ -66,7 +68,7 @@ const Fourthcard = () => {
             </Box>
             <Box bg={"#E0E4FC"} rounded={"10px"}>
               <Box>
-                <Img src={team1} />
+                <Img src={team3} />
               </Box>
               <Box p={"15px"}>
                 <Text fontSize={"17px"} fontWeight={"bold"}>
@@ -77,7 +79,7 @@ const Fourthcard = () => {
             </Box>
             <Box bg={"#E0E4FC"} rounded={"10px"}>
               <Box>
-                <Img src={team2} />
+                <Img src={team4} />
               </Box>
               <Box p={"15px"}>
                 <Text fontSize={"17px"} fontWeight={"bold"}>
