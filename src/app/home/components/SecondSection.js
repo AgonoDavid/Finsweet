@@ -17,7 +17,7 @@ const SecondSection = () => {
     visible: { opacity: 1, x: 0 },
   };
 
-  const transition = { duration: 2 };
+  const transition = { duration: 1.5 };
 
   const startAnimation = async () => {
     await controls.start("visible");

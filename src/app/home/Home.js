@@ -118,7 +118,7 @@ export const Home = () => {
         w={"80%"}
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
-        transition={{ type: "spring", stiffness: 20, duration: 3 }}
+        transition={{ type: "spring", stiffness: 20, duration: 2.5 }}
       >
         <Center>
           <Img src={dashboardimg} w={isLargerThan800 ? "100%" : "100%"} />
